@@ -48,7 +48,7 @@ var strBoon = {
     hpGR: 0,
     strGR: 15,
     magGR: 0,
-    sklGR: 5, 
+    sklGR: 5,
     spdGR: 0,
     lckGR: 0,
     defGR: 5,
@@ -194,7 +194,7 @@ var lckBoon = {
     magMod: 2,
     sklMod: 0,
     spdMod: 0,
-    lckMod: 4, 
+    lckMod: 4,
     defMod: 0,
     resMod: 0,
     hpGR: 0,
@@ -326,17 +326,17 @@ var boonArr = [noBB, hpBoon, strBoon, magBoon, sklBoon, spdBoon, lckBoon, defBoo
 var baneArr = [noBB, hpBane, strBane, magBane, sklBane, spdBane, lckBane, defBane, resBane];
 /* accepts boon object and returns array of boon's growth rates */
 function getBoonGRArr(boon) {
-    return [boon.hpGR, boon.strGR, boon.magGR, boon.sklGR, boon.spdGR, boon.lckGR, boon.defGR, boon.resGR];
+  return [boon.hpGR, boon.strGR, boon.magGR, boon.sklGR, boon.spdGR, boon.lckGR, boon.defGR, boon.resGR];
 }
 /* accepts boon object and returns array of boon's mods */
 function getBoonModArr(boon) {
-    return ["-", boon.strMod, boon.magMod, boon.sklMod, boon.spdMod, boon.lckMod, boon.defMod, boon.resMod];
+  return ["-", boon.strMod, boon.magMod, boon.sklMod, boon.spdMod, boon.lckMod, boon.defMod, boon.resMod];
 }
 /* accepts bane object and returns array of bane's grs */
 function getBaneGRArr(bane) {
-    return [bane.hpGR, bane.strGR, bane.magGR, bane.sklGR, bane.spdGR, bane.lckGR, bane.defGR, bane.resGR];
+  return [bane.hpGR, bane.strGR, bane.magGR, bane.sklGR, bane.spdGR, bane.lckGR, bane.defGR, bane.resGR];
 }
 /* accepts bane object and returns array of bane's mods */
 function getBaneModArr(bane) {
-    return ["-", bane.strMod, bane.magMod, bane.sklMod, bane.spdMod, bane.lckMod, bane.defMod, bane.resMod];
+  return ["-", bane.strMod, bane.magMod, bane.sklMod, bane.spdMod, bane.lckMod, bane.defMod, bane.resMod];
 }

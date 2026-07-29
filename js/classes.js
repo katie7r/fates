@@ -726,7 +726,7 @@ var spearFighter = {
     maxMag: 15,
     maxSkl: 23,
     maxSpd: 22,
-    maxLck: 21, 
+    maxLck: 21,
     maxDef: 22,
     maxRes: 21,
     hpGR: 15,
@@ -1209,7 +1209,7 @@ var villager = {
 var dreadFighter = {
     n: "Dread Fighter",
     maxHP: 55,
-    maxStr: 32, 
+    maxStr: 32,
     maxMag: 28,
     maxSkl: 29,
     maxSpd: 31,
@@ -1388,13 +1388,13 @@ var otherClsF = [dreadFighter, darkFalcon, witch, greatLord];
 var otherClsM = [dreadFighter, darkFalcon, ballistician, lodestar, vanguard, grandmaster];
 /* accepts cl object and returns array of cl's max stats */
 function getModArr(cl) {
-    return ["-", cl.strMod, cl.magMod, cl.sklMod, cl.spdMod, cl.lckMod, cl.defMod, cl.resMod];
+  return ["-", cl.strMod, cl.magMod, cl.sklMod, cl.spdMod, cl.lckMod, cl.defMod, cl.resMod];
 }
 /* accepts cl string and returns array of cl's grs */
 function getGRArrC(cl) {
-    return [cl.hpGR, cl.strGR, cl.magGR, cl.sklGR, cl.spdGR, cl.lckGR, cl.defGR, cl.resGR];
+  return [cl.hpGR, cl.strGR, cl.magGR, cl.sklGR, cl.spdGR, cl.lckGR, cl.defGR, cl.resGR];
 }
 /* accepts unit object and returns array of unit's max stats */
 function getMaxStatArr(unit) {
-    return [unit.maxHP, unit.maxStr, unit.maxMag, unit.maxSkl, unit.maxSpd, unit.maxLck, unit.maxDef, unit.maxRes];
+  return [unit.maxHP, unit.maxStr, unit.maxMag, unit.maxSkl, unit.maxSpd, unit.maxLck, unit.maxDef, unit.maxRes];
 }
