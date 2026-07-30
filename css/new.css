@@ -1,0 +1,12 @@
+h2 {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+summary.header::after {
+  height: 1.5rem;
+}
+
+summary.header h2 {
+  margin-bottom: 0;
+}

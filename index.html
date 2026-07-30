@@ -4,9 +4,10 @@
 <head>
   <title>Fire Emblem Fates Calculator</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
   <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js"
     integrity="sha256-8DGpv13HIm+5iDNWw1XqxgFB4mj+yOKFNb+tHBZOowc=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/new.css">
   <!-- <link rel="stylesheet" href="css/revpairings.css"> -->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
   <script type="text/javascript" src="js/bb.js"></script>
@@ -16,133 +17,140 @@
 </head>
 
 <body>
-  <div id="info">
-    Original project by <a href="https://soapy4159.github.io/ferevpairings/">soapy</a>!
-  </div>
-  <h3>Fire Emblem Fates Calculator</h3>
+<header>
+  <hgroup>
+    <h1>Fire Emblem Fates Calculator</h1>
+    <p>
+      Original project by <a href="https://soapy4159.github.io/ferevpairings/">soapy</a>!
+    </p>
+  </hgroup>
+</header>
+
+<main>
   <div id="content">
     Select Your Game:
     <select id="game">
       <option value="r">Revelation</option>
       <option value="c">Conquest</option>
       <option value="b">Birthright</option>
-    </select><br><br>
-    Customize Your Corrin:
-    <table id="corrinBoonBane">
-      <tr>
-        <td>Boon:</td>
-        <td><select id="boonSelect" class="boonSelect"></select></td>
-        <td>Bane:</td>
-        <td><select id="baneSelect" class="baneSelect"></select></td>
-        <td>Talent:</td>
-        <td><select id="talentSelect" class="talentSelect"></select></td>
-      </tr>
-    </table>
-    <table id="corrinStats" class="lpad" unit="Corrin (F)">
-      <tr>
-        <td>Corrin's Bases</td>
-        <td class="sv">HP</td>
-        <td class="sv">Str</td>
-        <td class="sv">Mag</td>
-        <td class="sv">Skl</td>
-        <td class="sv">Spd</td>
-        <td class="sv">Lck</td>
-        <td class="sv">Def</td>
-        <td class="sv">Res</td>
-      </tr>
-      <tr class="odd">
-        <td>Stat Modifiers</td>
-        <td id="corrinHP" class="sv"></td>
-        <td id="corrinStr" class="sv"></td>
-        <td id="corrinMag" class="sv"></td>
-        <td id="corrinSkl" class="sv"></td>
-        <td id="corrinSpd" class="sv"></td>
-        <td id="corrinLck" class="sv"></td>
-        <td id="corrinDef" class="sv"></td>
-        <td id="corrinRes" class="sv"></td>
-      </tr>
-      <tr class="even">
-        <td>Growth Rates</td>
-        <td id="corrinHPGR" class="sv"></td>
-        <td id="corrinStrGR" class="sv"></td>
-        <td id="corrinMagGR" class="sv"></td>
-        <td id="corrinSklGR" class="sv"></td>
-        <td id="corrinSpdGR" class="sv"></td>
-        <td id="corrinLckGR" class="sv"></td>
-        <td id="corrinDefGR" class="sv"></td>
-        <td id="corrinResGR" class="sv"></td>
-      </tr>
-    </table>
-    <br>
-    <div id="fg">
-      <button type="button" id="toggleFG">-</button>
-      <span id="fgShowHide">Hide</span> First Generation Units
+    </select>
+
+    <details name="corrin" open>
+      <summary class="header"><h2>Corrin</h2></summary>
+      <table id="corrinBoonBane">
+        <tr>
+          <td>Boon:</td>
+          <td><select id="boonSelect" class="boonSelect"></select></td>
+          <td>Bane:</td>
+          <td><select id="baneSelect" class="baneSelect"></select></td>
+          <td>Talent:</td>
+          <td><select id="talentSelect" class="talentSelect"></select></td>
+        </tr>
+      </table>
+      <table id="corrinStats" class="lpad" unit="Corrin (F)">
+        <tr>
+          <td>Corrin's Bases</td>
+          <td class="sv">HP</td>
+          <td class="sv">Str</td>
+          <td class="sv">Mag</td>
+          <td class="sv">Skl</td>
+          <td class="sv">Spd</td>
+          <td class="sv">Lck</td>
+          <td class="sv">Def</td>
+          <td class="sv">Res</td>
+        </tr>
+        <tr class="odd">
+          <td>Stat Modifiers</td>
+          <td id="corrinHP" class="sv"></td>
+          <td id="corrinStr" class="sv"></td>
+          <td id="corrinMag" class="sv"></td>
+          <td id="corrinSkl" class="sv"></td>
+          <td id="corrinSpd" class="sv"></td>
+          <td id="corrinLck" class="sv"></td>
+          <td id="corrinDef" class="sv"></td>
+          <td id="corrinRes" class="sv"></td>
+        </tr>
+        <tr class="even">
+          <td>Growth Rates</td>
+          <td id="corrinHPGR" class="sv"></td>
+          <td id="corrinStrGR" class="sv"></td>
+          <td id="corrinMagGR" class="sv"></td>
+          <td id="corrinSklGR" class="sv"></td>
+          <td id="corrinSpdGR" class="sv"></td>
+          <td id="corrinLckGR" class="sv"></td>
+          <td id="corrinDefGR" class="sv"></td>
+          <td id="corrinResGR" class="sv"></td>
+        </tr>
+      </table>
+    </details>
+
+    <details id="fg" name="fg" open>
+      <summary class="header"><h2>First Generation Units</h2></summary>
+      <ul>
+        <li> Royal units' names are followed by an asterisk.</li>
+        <li> Corrin can use a Partner Seal to inherit a class from any unit with whom (s)he has achieved A rank.</li>
+        <li> Nohr Prince(ss), Wolfskin, Kitsune, Songstress, and Villager cannot be inherited through Partner or Friendship Seals.</li>
+        <li> Same-sex pairings do not result in children.</li>
+        <li> If the unit has the Aptitude skill equipped, each stat's growth rate in game will be 10 higher than the value shown as the growth rate here.</li>
+        <li> Pair up bonuses shown are for S Rank partners only.</li>
+        <li> In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and mounted promoted classes provide +1 movement.</li>
+      </ul>
       <div id="ffs" class="lpad">
-        <span class="fyi">- Royal units' names are followed by an asterisk.</span></br>
-        <span class="fyi">- Corrin can use a Partner Seal to inherit a class from any unit with whom (s)he has achieved
-          A rank.</span><br>
-        <span class="fyi">- Nohr Prince(ss), Wolfskin, Kitsune, Songstress, and Villager cannot be inherited through
-          Partner or Friendship Seals.</span><br>
-        <span class="fyi">- Same-sex pairings do not result in children.</span><br>
-        <span class="fyi">- If the unit has the Aptitude skill equipped, each stat's growth rate in game will be 10
-          higher than the value shown as the growth rate here.</span><br>
-        <span class="fyi">- Pair up bonuses shown are for S Rank partners only.</span><br>
-        <span class="fyi">- In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and
-          mounted promoted classes provide +1 movement.</span>
         <table id="firstGen"></table>
       </div>
-    </div>
-    <br>
-    <div id="kids">
-      <button type="button" id="toggleK">-</button>
-      <span id="kidsShowHide">Hide</span> Child Units
+    </details>
+
+    <details id="kids" name="kids" open>
+      <summary class="header"><h2>Child Units</h2></summary>
+      <ul>
+        <li> Mods shown when no second parent is selected assume the second parent will not be a child.</li>
+        <li> Classes from the second parent are always inherited first.</li>
+        <li> Royal units' names are followed by an asterisk.</li>
+        <li> Though the option will still be provided here, sibling units cannot S rank with each other.</li>
+        <li> Nohr Prince(ss), Wolfskin, Kitsune, and Villager can only be inherited from a parent.</li>
+        <li> Songstress cannot be inherited under any circumstances.</li>
+        <li> Base growth rates are independent of second parent and class.</li>
+        <li> Individual growth rates are calculated based on the selected second parent but do not consider the selected class.</li>
+        <li> If the unit has the Aptitude skill equipped, each stat's growth rate in game will be 10 higher than the value shown as the growth rate here.</li>
+        <li> Pair up bonuses shown are for S Rank partners only.</li>
+        <li> In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and mounted promoted classes provide +1 movement.</li>
+      </ul>
       <div id="kds" class="lpad">
-        <span class="fyi">- Mods shown when no second parent is selected assume the second parent will not be a
-          child.</span><br>
-        <span class="fyi">- Classes from the second parent are always inherited first.</span><br>
-        <span class="fyi">- Royal units' names are followed by an asterisk.</span><br>
-        <span class="fyi">- Though the option will still be provided here, sibling units cannot S rank with each
-          other.</span><br>
-        <span class="fyi">- Nohr Prince(ss), Wolfskin, Kitsune, and Villager can only be inherited from a
-          parent.</span><br>
-        <span class="fyi">- Songstress cannot be inherited under any circumstances.</span><br>
-        <span class="fyi">- Base growth rates are independent of second parent and class.</span><br>
-        <span class="fyi">- Individual growth rates are calculated based on the selected second parent but do not
-          consider the selected class.</span><br>
-        <span class="fyi">- If the unit has the Aptitude skill equipped, each stat's growth rate in game will be 10
-          higher than the value shown as the growth rate here.</span><br>
-        <span class="fyi">- Pair up bonuses shown are for S Rank partners only.</span><br>
-        <span class="fyi">- In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and
-          mounted promoted classes provide +1 movement.</span>
-        <table id="kiddies"><br>
-          <tr>
-            <td>Child</td>
-            <td>First Parent</td>
-            <td>Second Parent</td>
-            <td>A+ Rank</td>
-            <td>S Rank</td>
-            <td>Class</td>
-            <td>Displaying</td>
-            <td class="sv">HP</td>
-            <td class="sv">Str</td>
-            <td class="sv">Mag</td>
-            <td class="sv">Skl</td>
-            <td class="sv">Spd</td>
-            <td class="sv">Lck</td>
-            <td class="sv">Def</td>
-            <td class="sv">Res</td>
-          </tr>
+        <table id="kiddies">
+          <thead>
+            <tr>
+              <th>Child</th>
+              <th>First Parent</th>
+              <th>Second Parent</th>
+              <th>A+ Rank</th>
+              <th>S Rank</th>
+              <th>Class</th>
+              <th>Displaying</th>
+              <th class="sv">HP</th>
+              <th class="sv">Str</th>
+              <th class="sv">Mag</th>
+              <th class="sv">Skl</th>
+              <th class="sv">Spd</th>
+              <th class="sv">Lck</th>
+              <th class="sv">Def</th>
+              <th class="sv">Res</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
         </table>
       </div>
-    </div>
-    <!--
-    <div id="footer">
-        Credit for all the hard work here goes to <a href="https://soapy4159.github.io/ferevpairings/">soapy</a>;
-        all I did was unlock some pairings (for <a href="https://gamebanana.com/mods/51420">modded</a> playthroughs)
-        and play around with with some CSS for funsies.
-    </div>
-    -->
+    </details>
+
   </div>
+</main>
+
+<!--
+<footer>
+    Credit for all the hard work here goes to <a href="https://soapy4159.github.io/ferevpairings/">soapy</a>;
+    all I did was unlock some pairings (for <a href="https://gamebanana.com/mods/51420">modded</a> playthroughs)
+    and play around with with some CSS for funsies.
+</footer>
+-->
 </body>
 
 </html>
