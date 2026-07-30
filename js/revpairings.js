@@ -130,7 +130,7 @@ function gogogo() {
   $(".spl").each(function () { //for each s select
     var g = $("#game").val();
     var unit = getUnitO($(this).data("unit"));
-    var sRankable = unit.sRank.concat(unit.sRankMod)
+    var sRankable = getSRankOptions(unit);
     var noLove = document.createElement("option");
     $(noLove).val("-").text("-");
     $(this).append(noLove);
@@ -271,12 +271,16 @@ function fillKid(kid) {
   var g = $("#game").val();
   var v = kid.vName;
   $("#" + v + "SecPar").append($("<option></option>").val("-").text("-"));
-  for (var i = 0; i < kid.secondParent.length; i++) { //for each parent option
-    var secPar = getUnitO(kid.secondParent[i]);
-    if ((g == "r" && $.inArray(secPar, allR) != -1) || (g == "c" && $.inArray(secPar, allC) != -1) || (g == "b" && $.inArray(secPar, allB) != -1)) {
-      $("#" + v + "SecPar").append($("<option></option>").val(secPar.n).text(secPar.n).attr("data-optNo", i)); //add parent option tag
+
+  var parentSRanks = getSRankOptions(kid.firstParent)
+  var secondParents = allUnits.filter(unit => parentSRanks.includes(unit.n))
+
+  secondParents.forEach((secondParent) => {
+    if (g == "r" || (g == "c" && secondParent.conquest) || (g == "b" && secondParent.birthright)) {
+      $("#" + v + "SecPar").append($("<option></option>").val(secondParent.n).text(secondParent.n).attr("data-optNo", i)) //add parent option tag
     }
-  }
+  })
+
   var fMods = getModArr(kid.firstParent);
   var j; //initialize j-- mod
   for (var i = 1; i < statArr.length; i++) { //for each stat
@@ -325,6 +329,11 @@ function getSpl(v) {
   var spl = $("#" + v + "Spl").val();
   return getUnitO(spl);
 }
+// get S Rank options for given unit (vanilla + modded)
+function getSRankOptions(unit) {
+  // TODO: toggle on page for whether to use modded options or just vanilla
+  return unit ? unit.sRankVanilla.concat(unit.sRankModded) : []
+}
 /* accepts a unit string and returns the selected class object */
 function getCl(v) {
   var cl = $("#" + v + "Class").val(); //get selected class string
@@ -346,12 +355,7 @@ function getClO(str) {
 }
 /* takes a unit name string and returns the unit object */
 function getUnitO(str) {
-  for (var i = 0; i < allUnits.length; i++) { //for every unit
-    if (allUnits[i].n == str) { //if unit object found
-      return allUnits[i]; //return unit object
-    }
-  }
-  return noPar;
+  return allUnits.find(unit => unit.n == str) ?? noPar
 }
 /* returns selected boon object */
 function getBoon() {
