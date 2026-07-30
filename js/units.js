@@ -5,6 +5,7 @@ var corrinF = {
   baseClass: ["Nohr Princess"],
   bff: [],
   sRank: ["Gunter", "Jakob", "Kaze", "Silas", "Shura", "Izana", "Arthur", "Odin", "Niles", "Laslow", "Benny", "Leo", "Keaton", "Xander", "Subaki", "Saizo", "Azama", "Hayato", "Hinata", "Takumi", "Kaden", "Ryoma", "Yukimura", "Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Shiro", "Kiragi", "Asugi", "Hisame", "Rhajat"],
+  sRankMod: [],
   strMod: 0,
   magMod: 0,
   sklMod: 0,
@@ -34,7 +35,9 @@ var corrinF = {
   spb: [0, 0, 0, 0, 0, 0, 1],
   isChild: false,
   isRoyal: true,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: true
 }
 var corrinM = {
   n: "Corrin (M)",
@@ -42,6 +45,7 @@ var corrinM = {
   baseClass: ["Nohr Prince"],
   bff: [],
   sRank: ["Felicia", "Azura", "Mozu", "Elise", "Effie", "Niles", "Nyx", "Camilla", "Selena", "Beruka", "Peri", "Charlotte", "Flora", "Rinkah", "Sakura", "Hana", "Orochi", "Hinoka", "Setsuna", "Oboro", "Kagero", "Reina", "Scarlet", "Anna", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Selkie", "Mitama", "Caeldori", "Rhajat"],
+  sRankMod: [],
   strMod: 0,
   magMod: 0,
   sklMod: 0,
@@ -71,7 +75,9 @@ var corrinM = {
   spb: [0, 0, 0, 0, 0, 0, 1],
   isChild: false,
   isRoyal: true,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: true
 }
 var gunter = {
   n: "Gunter",
@@ -79,6 +85,7 @@ var gunter = {
   baseClass: ["Cavalier", "Mercenary", "Wyvern Rider"],
   bff: ["Jakob"],
   sRank: ["Corrin (F)"],
+  sRankMod: ["Corrin (M)", "Fuga", "Izana", "Kaze", "Reina"],
   strMod: 2,
   magMod: 0,
   sklMod: 1,
@@ -100,7 +107,9 @@ var gunter = {
   spb: [1, 0, 0, 0, 0, 1, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var felicia = {
   n: "Felicia",
@@ -108,6 +117,7 @@ var felicia = {
   baseClass: ["Troubadour", "Mercenary"],
   bff: ["Hana", "Peri", "Flora"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato"],
+  sRankMod: [],
   strMod: -2,
   magMod: 2,
   sklMod: 0,
@@ -129,7 +139,9 @@ var felicia = {
   spb: [0, 0, 0, 1, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: true
 }
 var jakob = {
   n: "Jakob",
@@ -137,6 +149,7 @@ var jakob = {
   baseClass: ["Troubadour", "Cavalier"],
   bff: ["Gunter", "Silas", "Takumi"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro"],
+  sRankMod: ["Corrin (M)", "Flora", "Izana", "Kaze", "Silas", "Arthur", "Laslow", "Leo", "Niles", "Odin", "Xander", "Azama", "Hinata", "Kaden", "Reina", "Ryoma", "Saizo", "Subaki"],
   strMod: 2,
   magMod: -2,
   sklMod: 2,
@@ -158,7 +171,9 @@ var jakob = {
   spb: [1, 0, 1, 0, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: true
 }
 var kaze = {
   n: "Kaze",
@@ -166,6 +181,7 @@ var kaze = {
   baseClass: ["Ninja", "Samurai"],
   bff: ["Saizo", "Silas", "Xander"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro"],
+  sRankMod: [],
   strMod: -2,
   magMod: 0,
   sklMod: 2,
@@ -187,7 +203,9 @@ var kaze = {
   spb: [0, 0, 1, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: true
 }
 var azura = {
   n: "Azura",
@@ -195,6 +213,7 @@ var azura = {
   baseClass: ["Songstress", "Sky Knight"],
   bff: ["Hinoka", "Sakura", "Elise"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato"],
+  sRankMod: [],
   strMod: 0,
   magMod: 0,
   sklMod: 1,
@@ -216,7 +235,9 @@ var azura = {
   spb: [0, 0, 0, 1, 1, 0, 0],
   isChild: false,
   isRoyal: true,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: true
 }
 var silas = {
   n: "Silas",
@@ -224,6 +245,7 @@ var silas = {
   baseClass: ["Cavalier", "Mercenary"],
   bff: ["Ryoma", "Jakob", "Kaze"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: 2,
@@ -245,13 +267,16 @@ var silas = {
   spb: [1, 0, 0, 0, 0, 1, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: true
 }
 var shura = {
   n: "Shura",
   vName: "shura",
   baseClass: ["Outlaw", "Ninja", "Fighter"],
   sRank: ["Corrin (F)"],
+  sRankMod: [],
   bff: [],
   strMod: -1,
   magMod: 0,
@@ -274,13 +299,16 @@ var shura = {
   spb: [0, 0, 0, 1, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: true
 }
 var izana = {
   n: "Izana",
   vName: "izana",
   baseClass: ["Monk", "Samurai", "Apothecary"],
   sRank: ["Corrin (F)"],
+  sRankMod: [],
   bff: [],
   strMod: 0,
   magMod: 1,
@@ -303,7 +331,9 @@ var izana = {
   spb: [0, 0, 1, 0, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: true
 }
 var mozu = {
   n: "Mozu",
@@ -311,6 +341,7 @@ var mozu = {
   baseClass: ["Villager", "Archer"],
   bff: ["Oboro", "Effie", "Nyx"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato"],
+  sRankMod: [],
   strMod: 0,
   magMod: 0,
   sklMod: 1,
@@ -332,7 +363,9 @@ var mozu = {
   spb: [0, 0, 1, 0, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: true
 }
 var elise = {
   n: "Elise",
@@ -340,6 +373,7 @@ var elise = {
   baseClass: ["Troubadour", "Wyvern Rider"],
   bff: ["Camilla", "Azura", "Effie", "Sakura"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Ryoma", "Takumi"],
+  sRankMod: [],
   strMod: -1,
   magMod: 3,
   sklMod: -2,
@@ -361,7 +395,9 @@ var elise = {
   spb: [0, 1, 0, 1, 0, 0, 0],
   isChild: false,
   isRoyal: true,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var arthur = {
   n: "Arthur",
@@ -369,6 +405,7 @@ var arthur = {
   baseClass: ["Fighter", "Cavalier"],
   bff: ["Benny", "Keaton", "Niles", "Azama"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Kagero", "Setsuna"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: 3,
@@ -390,7 +427,9 @@ var arthur = {
   spb: [0, 0, 2, 0, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var effie = {
   n: "Effie",
@@ -398,6 +437,7 @@ var effie = {
   baseClass: ["Knight", "Troubadour"],
   bff: ["Elise", "Mozu", "Nyx", "Hana"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Hayato", "Azama"],
+  sRankMod: [],
   strMod: 3,
   magMod: 0,
   sklMod: -1,
@@ -419,7 +459,9 @@ var effie = {
   spb: [2, 0, 0, 0, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var odin = {
   n: "Odin",
@@ -427,6 +469,7 @@ var odin = {
   baseClass: ["Dark Mage", "Samurai"],
   bff: ["Leo", "Laslow", "Niles", "Hinata"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Orochi", "Kagero"],
+  sRankMod: [],
   strMod: 0,
   magMod: 1,
   sklMod: 1,
@@ -448,7 +491,9 @@ var odin = {
   spb: [0, 1, 1, 0, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var niles = {
   n: "Niles",
@@ -456,6 +501,7 @@ var niles = {
   baseClass: ["Outlaw", "Dark Mage"],
   bff: ["Leo", "Odin", "Arthur", "Subaki"],
   sRank: ["Corrin (F)", "Corrin (M)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Setsuna", "Oboro"],
+  sRankMod: [],
   strMod: -2,
   magMod: 0,
   sklMod: -1,
@@ -477,7 +523,9 @@ var niles = {
   spb: [0, 1, 0, 0, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var nyx = {
   n: "Nyx",
@@ -485,6 +533,7 @@ var nyx = {
   baseClass: ["Dark Mage", "Outlaw"],
   bff: ["Mozu", "Charlotte", "Effie", "Orochi"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Hayato", "Subaki"],
+  sRankMod: [],
   strMod: 0,
   magMod: 3,
   sklMod: -2,
@@ -506,7 +555,9 @@ var nyx = {
   spb: [0, 1, 0, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var camilla = {
   n: "Camilla",
@@ -514,6 +565,7 @@ var camilla = {
   baseClass: ["Wyvern Rider", "Dark Mage"],
   bff: ["Elise", "Beruka", "Selena", "Hinoka"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Ryoma", "Takumi"],
+  sRankMod: [],
   strMod: 1,
   magMod: -1,
   sklMod: 1,
@@ -535,7 +587,9 @@ var camilla = {
   spb: [1, 0, 0, 0, 0, 1, 0],
   isChild: false,
   isRoyal: true,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var selena = {
   n: "Selena",
@@ -543,6 +597,7 @@ var selena = {
   baseClass: ["Mercenary", "Sky Knight"],
   bff: ["Camilla", "Beruka", "Peri", "Setsuna"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Subaki", "Hinata"],
+  sRankMod: [],
   strMod: -1,
   magMod: 0,
   sklMod: -1,
@@ -564,7 +619,9 @@ var selena = {
   spb: [1, 0, 0, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var beruka = {
   n: "Beruka",
@@ -572,6 +629,7 @@ var beruka = {
   baseClass: ["Wyvern Rider", "Fighter"],
   bff: ["Camilla", "Charlotte", "Selena", "Oboro"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Azama", "Saizo"],
+  sRankMod: [],
   strMod: -1,
   magMod: 0,
   sklMod: 2,
@@ -593,7 +651,9 @@ var beruka = {
   spb: [0, 0, 0, 0, 1, 1, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var laslow = {
   n: "Laslow",
@@ -601,6 +661,7 @@ var laslow = {
   baseClass: ["Mercenary", "Ninja"],
   bff: ["Xander", "Odin", "Keaton", "Saizo"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Orochi", "Hana"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: 2,
@@ -622,7 +683,9 @@ var laslow = {
   spb: [1, 0, 0, 0, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var peri = {
   n: "Peri",
@@ -630,6 +693,7 @@ var peri = {
   baseClass: ["Cavalier", "Dark Mage"],
   bff: ["Felicia", "Charlotte", "Selena", "Kagero"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Hinata", "Kaden"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: -1,
@@ -651,7 +715,9 @@ var peri = {
   spb: [1, 0, 0, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var benny = {
   n: "Benny",
@@ -659,6 +725,7 @@ var benny = {
   baseClass: ["Knight", "Fighter"],
   bff: ["Keaton", "Arthur", "Hayato"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Rinkah", "Oboro"],
+  sRankMod: [],
   strMod: 0,
   magMod: 0,
   sklMod: 0,
@@ -680,7 +747,9 @@ var benny = {
   spb: [1, 0, 0, 0, 0, 1, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var charlotte = {
   n: "Charlotte",
@@ -688,6 +757,7 @@ var charlotte = {
   baseClass: ["Fighter", "Troubadour"],
   bff: ["Peri", "Beruka", "Nyx", "Rinkah"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Saizo", "Kaden"],
+  sRankMod: [],
   strMod: 3,
   magMod: 0,
   sklMod: 0,
@@ -709,7 +779,9 @@ var charlotte = {
   spb: [1, 0, 0, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var leo = {
   n: "Leo",
@@ -717,6 +789,7 @@ var leo = {
   baseClass: ["Dark Mage", "Troubadour"],
   bff: ["Xander", "Odin", "Niles", "Takumi"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Hinoka", "Sakura"],
+  sRankMod: [],
   strMod: -2,
   magMod: 2,
   sklMod: 0,
@@ -738,7 +811,9 @@ var leo = {
   spb: [0, 1, 0, 0, 1, 0, 0],
   isChild: false,
   isRoyal: true,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var keaton = {
   n: "Keaton",
@@ -746,6 +821,7 @@ var keaton = {
   baseClass: ["Wolfskin", "Fighter"],
   bff: ["Benny", "Arthur", "Laslow", "Kaden"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Camilla", "Elise", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Rinkah", "Hana"],
+  sRankMod: [],
   strMod: 3,
   magMod: 0,
   sklMod: -2,
@@ -767,7 +843,9 @@ var keaton = {
   spb: [1, 0, 0, 0, 0, 1, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var xander = {
   n: "Xander",
@@ -775,6 +853,7 @@ var xander = {
   baseClass: ["Cavalier", "Wyvern Rider"],
   bff: ["Kaze", "Laslow", "Leo", "Ryoma"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Charlotte", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Hinoka", "Sakura"],
+  sRankMod: [],
   strMod: 2,
   magMod: -1,
   sklMod: -1,
@@ -796,7 +875,9 @@ var xander = {
   spb: [1, 0, 0, 0, 1, 0, 0],
   isChild: false,
   isRoyal: true,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: true
 }
 var flora = {
   n: "Flora",
@@ -804,6 +885,7 @@ var flora = {
   baseClass: ["Troubadour", "Dark Mage", "Mercenary"],
   bff: ["Felicia"],
   sRank: ["Corrin (M)"],
+  sRankMod: [],
   strMod: 1,
   magMod: -1,
   sklMod: 2,
@@ -825,7 +907,9 @@ var flora = {
   spb: [1, 0, 0, 0, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: false,
+  conquest: true
 }
 var rinkah = {
   n: "Rinkah",
@@ -833,6 +917,7 @@ var rinkah = {
   baseClass: ["Oni Savage", "Ninja"],
   bff: ["Orochi", "Kagero", "Oboro", "Charlotte"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Benny", "Keaton"],
+  sRankMod: [],
   strMod: -1,
   magMod: 0,
   sklMod: -2,
@@ -854,7 +939,9 @@ var rinkah = {
   spb: [0, 0, 0, 1, 0, 1, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var sakura = {
   n: "Sakura",
@@ -862,6 +949,7 @@ var sakura = {
   baseClass: ["Shrine Maiden", "Sky Knight"],
   bff: ["Hinoka", "Hana", "Azura", "Elise"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Xander", "Leo"],
+  sRankMod: [],
   strMod: 0,
   magMod: 2,
   sklMod: -1,
@@ -883,7 +971,9 @@ var sakura = {
   spb: [0, 0, 0, 1, 0, 0, 1],
   isChild: false,
   isRoyal: true,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var hana = {
   n: "Hana",
@@ -891,6 +981,7 @@ var hana = {
   baseClass: ["Samurai", "Shrine Maiden"],
   bff: ["Felicia", "Sakura", "Setsuna", "Effie"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Laslow", "Keaton"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: 1,
@@ -912,8 +1003,9 @@ var hana = {
   spb: [1, 0, 0, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
-
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var subaki = {
   n: "Subaki",
@@ -921,6 +1013,7 @@ var subaki = {
   baseClass: ["Sky Knight", "Samurai"],
   bff: ["Azama", "Saizo", "Hinata", "Niles"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Selena", "Nyx"],
+  sRankMod: [],
   strMod: -1,
   magMod: 0,
   sklMod: 2,
@@ -942,7 +1035,9 @@ var subaki = {
   spb: [0, 0, 1, 0, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var saizo = {
   n: "Saizo",
@@ -950,6 +1045,7 @@ var saizo = {
   baseClass: ["Ninja", "Samurai"],
   bff: ["Ryoma", "Subaki", "Kaze", "Laslow"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Charlotte", "Beruka"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: 3,
@@ -971,7 +1067,9 @@ var saizo = {
   spb: [1, 0, 0, 0, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var orochi = {
   n: "Orochi",
@@ -979,6 +1077,7 @@ var orochi = {
   baseClass: ["Diviner", "Apothecary"],
   bff: ["Rinkah", "Kagero", "Oboro", "Nyx"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Laslow", "Odin"],
+  sRankMod: [],
   strMod: 0,
   magMod: 3,
   sklMod: 2,
@@ -1000,7 +1099,9 @@ var orochi = {
   spb: [0, 1, 0, 0, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var hinoka = {
   n: "Hinoka",
@@ -1008,6 +1109,7 @@ var hinoka = {
   baseClass: ["Sky Knight", "Spear Fighter"],
   bff: ["Sakura", "Setsuna", "Azura", "Camilla"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Xander", "Leo"],
+  sRankMod: [],
   strMod: 1,
   magMod: -1,
   sklMod: -1,
@@ -1029,7 +1131,9 @@ var hinoka = {
   spb: [0, 0, 0, 1, 0, 0, 1],
   isChild: false,
   isRoyal: true,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var azama = {
   n: "Azama",
@@ -1037,6 +1141,7 @@ var azama = {
   baseClass: ["Monk", "Apothecary"],
   bff: ["Kaden", "Subaki", "Hayato", "Arthur"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Effie", "Beruka"],
+  sRankMod: [],
   strMod: 2,
   magMod: -3,
   sklMod: 0,
@@ -1058,7 +1163,9 @@ var azama = {
   spb: [1, 0, 0, 0, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var setsuna = {
   n: "Setsuna",
@@ -1066,6 +1173,7 @@ var setsuna = {
   baseClass: ["Archer", "Ninja"],
   bff: ["Hinoka", "Kagero", "Hana", "Selena"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Niles", "Arthur"],
+  sRankMod: [],
   strMod: 0,
   magMod: 0,
   sklMod: 1,
@@ -1087,7 +1195,9 @@ var setsuna = {
   spb: [0, 0, 1, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var hayato = {
   n: "Hayato",
@@ -1095,6 +1205,7 @@ var hayato = {
   baseClass: ["Diviner", "Oni Savage"],
   bff: ["Kaden", "Azama", "Benny", "Fuga"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Effie", "Nyx"],
+  sRankMod: [],
   strMod: 0,
   magMod: 1,
   sklMod: -1,
@@ -1116,7 +1227,9 @@ var hayato = {
   spb: [0, 0, 0, 1, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var oboro = {
   n: "Oboro",
@@ -1124,6 +1237,7 @@ var oboro = {
   baseClass: ["Spear Fighter", "Apothecary"],
   bff: ["Orochi", "Rinkah", "Mozu", "Beruka"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Benny", "Niles"],
+  sRankMod: [],
   strMod: 1,
   magMod: -1,
   sklMod: 1,
@@ -1145,7 +1259,9 @@ var oboro = {
   spb: [0, 0, 1, 0, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var hinata = {
   n: "Hinata",
@@ -1153,6 +1269,7 @@ var hinata = {
   baseClass: ["Samurai", "Oni Savage"],
   bff: ["Takumi", "Kaden", "Subaki", "Odin"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Peri", "Selena"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: -1,
@@ -1174,7 +1291,9 @@ var hinata = {
   spb: [1, 0, 0, 0, 1, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var takumi = {
   n: "Takumi",
@@ -1182,6 +1301,7 @@ var takumi = {
   baseClass: ["Archer", "Spear Fighter"],
   bff: ["Ryoma", "Hinata", "Jakob", "Leo"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Camilla", "Elise"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: 3,
@@ -1203,7 +1323,9 @@ var takumi = {
   spb: [0, 0, 1, 0, 0, 1, 0],
   isChild: false,
   isRoyal: true,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var kagero = {
   n: "Kagero",
@@ -1211,6 +1333,7 @@ var kagero = {
   baseClass: ["Ninja", "Diviner"],
   bff: ["Orochi", "Rinkah", "Setsuna", "Peri"],
   sRank: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato", "Odin", "Arthur"],
+  sRankMod: [],
   strMod: 3,
   magMod: 0,
   sklMod: -1,
@@ -1232,7 +1355,9 @@ var kagero = {
   spb: [0, 0, 0, 1, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var reina = {
   n: "Reina",
@@ -1240,6 +1365,7 @@ var reina = {
   baseClass: ["Sky Knight", "Diviner"],
   bff: [],
   sRank: ["Corrin (M)"],
+  sRankMod: [],
   strMod: 2,
   magMod: 0,
   sklMod: 0,
@@ -1261,7 +1387,9 @@ var reina = {
   spb: [1, 0, 0, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var kaden = {
   n: "Kaden",
@@ -1269,6 +1397,7 @@ var kaden = {
   baseClass: ["Kitsune", "Diviner"],
   bff: ["Hinata", "Azama", "Hayato", "Keaton"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Charlotte", "Peri"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: -3,
@@ -1290,7 +1419,9 @@ var kaden = {
   spb: [0, 0, 0, 1, 0, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var ryoma = {
   n: "Ryoma",
@@ -1298,6 +1429,7 @@ var ryoma = {
   baseClass: ["Samurai", "Sky Knight"],
   bff: ["Saizo", "Silas", "Takumi", "Xander"],
   sRank: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Camilla", "Elise"],
+  sRankMod: [],
   strMod: 1,
   magMod: 0,
   sklMod: 2,
@@ -1319,7 +1451,9 @@ var ryoma = {
   spb: [0, 0, 0, 2, 0, 0, 0],
   isChild: false,
   isRoyal: true,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var scarlet = {
   n: "Scarlet",
@@ -1327,6 +1461,7 @@ var scarlet = {
   baseClass: ["Wyvern Rider", "Outlaw", "Knight"],
   bff: [],
   sRank: ["Corrin (M)"],
+  sRankMod: [],
   strMod: 2,
   magMod: 0,
   sklMod: 0,
@@ -1348,7 +1483,9 @@ var scarlet = {
   spb: [1, 0, 1, 0, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: false
 }
 var yukimura = {
   n: "Yukimura",
@@ -1356,6 +1493,7 @@ var yukimura = {
   baseClass: ["Apothecary", "Samurai", "Monk"],
   bff: [],
   sRank: ["Corrin (F)"],
+  sRankMod: [],
   strMod: -1,
   magMod: 0,
   sklMod: 3,
@@ -1377,7 +1515,9 @@ var yukimura = {
   spb: [0, 0, 1, 1, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: true,
+  conquest: false
 }
 var fuga = {
   n: "Fuga",
@@ -1385,6 +1525,7 @@ var fuga = {
   baseClass: ["Samurai", "Oni Savage", "Monk"],
   bff: ["Hayato"],
   sRank: ["Corrin (F)"],
+  sRankMod: [],
   strMod: 2,
   magMod: -1,
   sklMod: 1,
@@ -1406,7 +1547,9 @@ var fuga = {
   spb: [1, 0, 0, 0, 0, 1, 0],
   isChild: false,
   isRoyal: false,
-  sex: "M"
+  sex: "M",
+  birthright: false,
+  conquest: false
 }
 var anna = {
   n: "Anna",
@@ -1414,6 +1557,7 @@ var anna = {
   baseClass: ["Outlaw", "Troubadour", "Apothecary"],
   bff: [],
   sRank: ["Corrin (M)"],
+  sRankMod: [],
   strMod: -1,
   magMod: 1,
   sklMod: 0,
@@ -1435,13 +1579,16 @@ var anna = {
   spb: [0, 0, 0, 0, 1, 0, 1],
   isChild: false,
   isRoyal: false,
-  sex: "F"
+  sex: "F",
+  birthright: true,
+  conquest: true
 }
 var noPar = {
   n: "-",
   baseClass: ["-"],
   bff: [],
   sRank: [],
+  sRankMod: [],
   strMod: 0,
   magMod: 0,
   sklMod: 0,
@@ -1455,7 +1602,9 @@ var noPar = {
   spb: [0, 0, 0, 0, 0, 0, 0],
   isChild: false,
   isRoyal: false,
-  sex: "A"
+  sex: "A",
+  birthright: true,
+  conquest: true
 }
 var kanaF = {
   n: "Kana (F)",
@@ -1465,6 +1614,7 @@ var kanaF = {
   secondParent: ["-", "Felicia", "Azura", "Mozu", "Elise", "Effie", "Nyx", "Camilla", "Selena", "Beruka", "Peri", "Charlotte", "Flora", "Rinkah", "Sakura", "Hana", "Hinoka", "Orochi", "Setsuna", "Oboro", "Kagero", "Reina", "Scarlet", "Anna", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Selkie", "Mitama", "Caeldori", "Rhajat"],
   bff: ["Midori", "Velouria", "Selkie", "Mitama"],
   sRank: ["Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Shiro", "Kiragi", "Asugi", "Hisame"],
+  sRankMod: [],
   baseHPGR: 30,
   baseStrGR: 35,
   baseMagGR: 30,
@@ -1494,7 +1644,9 @@ var kanaF = {
   spb: [0, 0, 0, 0, 0, 0, 0],
   sex: "F",
   isChild: true,
-  isRoyal: true
+  isRoyal: true,
+  birthright: true,
+  conquest: true
 }
 var kanaM = {
   n: "Kana (M)",
@@ -1504,6 +1656,7 @@ var kanaM = {
   secondParent: ["-", "Gunter", "Jakob", "Kaze", "Silas", "Shura", "Izana", "Arthur", "Odin", "Niles", "Laslow", "Benny", "Leo", "Keaton", "Xander", "Subaki", "Saizo", "Azama", "Hayato", "Hinata", "Takumi", "Kaden", "Ryoma", "Yukimura", "Fuga", "Siegbert", "Forrest", "Ignatius", "Percy", "Dwyer", "Shigure", "Shiro", "Kiragi", "Asugi", "Hisame"],
   bff: ["Siegbert", "Percy", "Shiro"],
   sRank: ["Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Selkie", "Mitama", "Caeldori", "Rhajat"],
+  sRankMod: [],
   baseHPGR: 30,
   baseStrGR: 35,
   baseMagGR: 30,
@@ -1534,7 +1687,9 @@ var kanaM = {
   sex: "M",
   isChild: true,
   isRoyal: true,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: true
 }
 var shigure = {
   n: "Shigure",
@@ -1544,6 +1699,7 @@ var shigure = {
   secondParent: ["-", "Arthur", "Azama", "Benny", "Corrin (M)", "Hayato", "Hinata", "Jakob", "Kaden", "Kaze", "Keaton", "Laslow", "Leo", "Niles", "Odin", "Ryoma", "Saizo", "Silas", "Subaki", "Takumi", "Xander"],
   bff: ["Forrest", "Hisame"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Selkie", "Mitama", "Caeldori", "Rhajat"],
+  sRankMod: [],
   baseHPGR: 35,
   baseStrGR: 45,
   baseMagGR: 5,
@@ -1574,7 +1730,9 @@ var shigure = {
   sex: "M",
   isChild: true,
   isRoyal: true,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: true
 }
 var dwyer = {
   n: "Dwyer",
@@ -1584,6 +1742,7 @@ var dwyer = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Nyx", "Oboro", "Orochi", "Peri", "Rinkah", "Selena", "Sakura", "Setsuna"],
   bff: ["Percy", "Asugi", "Kiragi"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Selkie", "Mitama", "Caeldori", "Rhajat"],
+  sRankMod: [],
   baseHPGR: 45,
   baseStrGR: 45,
   baseMagGR: 30,
@@ -1614,7 +1773,9 @@ var dwyer = {
   sex: "M",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: true
 }
 var sophie = {
   n: "Sophie",
@@ -1624,6 +1785,7 @@ var sophie = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Nyx", "Oboro", "Orochi", "Peri", "Rinkah", "Selena", "Sakura", "Setsuna"],
   bff: ["Velouria", "Soleil", "Caeldori"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Shiro", "Kiragi", "Asugi", "Hisame"],
+  sRankMod: [],
   baseHPGR: 35,
   baseStrGR: 35,
   baseMagGR: 10,
@@ -1654,7 +1816,9 @@ var sophie = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: true
 }
 var midori = {
   n: "Midori",
@@ -1664,6 +1828,7 @@ var midori = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Nyx", "Oboro", "Orochi", "Peri", "Rinkah", "Selena", "Sakura", "Setsuna"],
   bff: ["Kana (F)", "Ophelia", "Selkie"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Shiro", "Kiragi", "Asugi", "Hisame"],
+  sRankMod: [],
   baseHPGR: 45,
   baseStrGR: 35,
   baseMagGR: 5,
@@ -1694,7 +1859,9 @@ var midori = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: true
 }
 var siegbert = {
   n: "Siegbert",
@@ -1704,6 +1871,7 @@ var siegbert = {
   secondParent: ["-", "Azura", "Beruka", "Charlotte", "Corrin (F)", "Effie", "Felicia", "Hinoka", "Mozu", "Nyx", "Peri", "Sakura", "Selena"],
   bff: ["Kana (M)", "Forrest", "Ignatius", "Shiro"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Mitama", "Caeldori"],
+  sRankMod: [],
   baseHPGR: 40,
   baseStrGR: 45,
   baseMagGR: 5,
@@ -1734,7 +1902,9 @@ var siegbert = {
   sex: "M",
   isChild: true,
   isRoyal: true,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var forrest = {
   n: "Forrest",
@@ -1744,6 +1914,7 @@ var forrest = {
   secondParent: ["-", "Azura", "Beruka", "Charlotte", "Corrin (F)", "Effie", "Felicia", "Hinoka", "Mozu", "Nyx", "Peri", "Sakura", "Selena"],
   bff: ["Shigure", "Siegbert", "Ignatius", "Kiragi"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Selkie", "Rhajat"],
+  sRankMod: [],
   baseHPGR: 55,
   baseStrGR: 15,
   baseMagGR: 65,
@@ -1774,7 +1945,9 @@ var forrest = {
   sex: "M",
   isChild: true,
   isRoyal: true,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var ignatius = {
   n: "Ignatius",
@@ -1784,6 +1957,7 @@ var ignatius = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Mozu", "Nyx", "Oboro", "Peri", "Rinkah", "Selena"],
   bff: ["Siegbert", "Forrest", "Percy", "Asugi"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Selkie", "Caeldori"],
+  sRankMod: [],
   baseHPGR: 40,
   baseStrGR: 50,
   baseMagGR: 0,
@@ -1814,7 +1988,9 @@ var ignatius = {
   sex: "M",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var velouria = {
   n: "Velouria",
@@ -1824,6 +2000,7 @@ var velouria = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Hana", "Mozu", "Nyx", "Peri", "Rinkah", "Selena"],
   bff: ["Kana (F)", "Sophie", "Nina", "Selkie"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Hisame", "Kiragi"],
+  sRankMod: [],
   baseHPGR: 50,
   baseStrGR: 50,
   baseMagGR: 0,
@@ -1854,7 +2031,9 @@ var velouria = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var percy = {
   n: "Percy",
@@ -1864,6 +2043,7 @@ var percy = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Kagero", "Mozu", "Nyx", "Peri", "Selena", "Setsuna"],
   bff: ["Kana (M)", "Dwyer", "Ignatius", "Hisame"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Velouria", "Ophelia", "Soleil", "Nina", "Mitama", "Rhajat"],
+  sRankMod: [],
   baseHPGR: 30,
   baseStrGR: 30,
   baseMagGR: 5,
@@ -1894,7 +2074,9 @@ var percy = {
   sex: "M",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var ophelia = {
   n: "Ophelia",
@@ -1904,6 +2086,7 @@ var ophelia = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Kagero", "Mozu", "Nyx", "Orochi", "Peri", "Selena"],
   bff: ["Midori", "Soleil", "Rhajat"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Shiro", "Hisama"],
+  sRankMod: [],
   baseHPGR: 45,
   baseStrGR: 15,
   baseMagGR: 45,
@@ -1934,7 +2117,9 @@ var ophelia = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var soleil = {
   n: "Soleil",
@@ -1944,6 +2129,7 @@ var soleil = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Hana", "Mozu", "Nyx", "Orochi", "Peri", "Selena"],
   bff: ["Sophie", "Ophelia", "Nina", "Mitama"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Kiragi", "Asugi"],
+  sRankMod: [],
   baseHPGR: 25,
   baseStrGR: 60,
   baseMagGR: 0,
@@ -1974,7 +2160,9 @@ var soleil = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var nina = {
   n: "Nina",
@@ -1984,6 +2172,7 @@ var nina = {
   secondParent: ["-", "Azura", "Beruka", "Camilla", "Charlotte", "Corrin (F)", "Effie", "Elise", "Felicia", "Mozu", "Nyx", "Oboro", "Peri", "Selena", "Setsuna"],
   bff: ["Soleil", "Velouria", "Caeldori"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Siegbert", "Forrest", "Ignatius", "Percy", "Asugi", "Shiro"],
+  sRankMod: [],
   baseHPGR: 30,
   baseStrGR: 45,
   baseMagGR: 30,
@@ -2014,7 +2203,9 @@ var nina = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: false,
+  conquest: true
 }
 var shiro = {
   n: "Shiro",
@@ -2024,6 +2215,7 @@ var shiro = {
   secondParent: ["-", "Azura", "Camilla", "Corrin (F)", "Elise", "Felicia", "Hana", "Kagero", "Mozu", "Oboro", "Orochi", "Rinkah", "Setsuna"],
   bff: ["Kana (M)", "Kiragi", "Asugi", "Siegbert"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Selkie", "Mitama", "Caeldori", "Rhajat", "Ophelia", "Nina"],
+  sRankMod: [],
   baseHPGR: 50,
   baseStrGR: 50,
   baseMagGR: 0,
@@ -2054,7 +2246,9 @@ var shiro = {
   sex: "M",
   isChild: true,
   isRoyal: true,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
 var kiragi = {
   n: "Kiragi",
@@ -2064,6 +2258,7 @@ var kiragi = {
   secondParent: ["-", "Azura", "Camilla", "Corrin (F)", "Elise", "Felicia", "Hana", "Kagero", "Mozu", "Oboro", "Orochi", "Rinkah", "Setsuna"],
   bff: ["Dwyer", "Shiro", "Hisame", "Forrest"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Selkie", "Mitama", "Caeldori", "Rhajat", "Velouria", "Soleil"],
+  sRankMod: [],
   baseHPGR: 45,
   baseStrGR: 40,
   baseMagGR: 0,
@@ -2094,7 +2289,9 @@ var kiragi = {
   sex: "M",
   isChild: true,
   isRoyal: true,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
 var asugi = {
   n: "Asugi",
@@ -2104,6 +2301,7 @@ var asugi = {
   secondParent: ["-", "Azura", "Beruka", "Charlotte", "Corrin (F)", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Oboro", "Orochi", "Rinkah", "Sakura", "Setsuna"],
   bff: ["Dwyer", "Shiro", "Hisame", "Ignatius"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Selkie", "Mitama", "Caeldori", "Rhajat", "Soleil", "Nina"],
+  sRankMod: [],
   baseHPGR: 40,
   baseStrGR: 45,
   baseMagGR: 50,
@@ -2134,7 +2332,9 @@ var asugi = {
   sex: "M",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
 var selkie = {
   n: "Selkie",
@@ -2144,6 +2344,7 @@ var selkie = {
   secondParent: ["-", "Azura", "Charlotte", "Corrin (F)", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Oboro", "Orochi", "Peri", "Rinkah", "Sakura", "Setsuna"],
   bff: ["Kana (F)", "Midori", "Rhajat", "Velouria"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Shiro", "Kiragi", "Asugi", "Hisame", "Ignatius", "Forrest"],
+  sRankMod: [],
   baseHPGR: 35,
   baseStrGR: 30,
   baseMagGR: 15,
@@ -2174,7 +2375,9 @@ var selkie = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
 var hisame = {
   n: "Hisame",
@@ -2184,6 +2387,7 @@ var hisame = {
   secondParent: ["-", "Azura", "Corrin (F)", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Oboro", "Orochi", "Peri", "Rinkah", "Sakura", "Selena", "Setsuna"],
   bff: ["Shigure", "Kiragi", "Asugi", "Percy"],
   sRank: ["Corrin (F)", "Kana (F)", "Sophie", "Midori", "Selkie", "Mitama", "Caeldori", "Rhajat", "Velouria", "Ophelia"],
+  sRankMod: [],
   baseHPGR: 50,
   baseStrGR: 40,
   baseMagGR: 0,
@@ -2214,7 +2418,9 @@ var hisame = {
   sex: "M",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
 var mitama = {
   n: "Mitama",
@@ -2224,6 +2430,7 @@ var mitama = {
   secondParent: ["-", "Azura", "Beruka", "Corrin (F)", "Effie", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Oboro", "Orochi", "Rinkah", "Sakura", "Setsuna"],
   bff: ["Kana (F)", "Caeldori", "Rhajat", "Soleil"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Shiro", "Kiragi", "Asugi", "Hisame", "Percy", "Siegbert"],
+  sRankMod: [],
   baseHPGR: 45,
   baseStrGR: 40,
   baseMagGR: 35,
@@ -2254,7 +2461,9 @@ var mitama = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
 var caeldori = {
   n: "Caeldori",
@@ -2264,6 +2473,7 @@ var caeldori = {
   secondParent: ["-", "Azura", "Corrin (F)", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Nyx", "Oboro", "Orochi", "Rinkah", "Sakura", "Selena", "Setsuna"],
   bff: ["Sophie", "Mitama", "Rhajat", "Nina"],
   sRank: ["Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Shiro", "Kiragi", "Asugi", "Hisame", "Siegbert", "Ignatius"],
+  sRankMod: [],
   baseHPGR: 55,
   baseStrGR: 35,
   baseMagGR: 15,
@@ -2294,7 +2504,9 @@ var caeldori = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
 var rhajat = {
   n: "Rhajat",
@@ -2304,6 +2516,7 @@ var rhajat = {
   secondParent: ["-", "Azura", "Corrin (F)", "Effie", "Felicia", "Hana", "Hinoka", "Kagero", "Mozu", "Nyx", "Oboro", "Orochi", "Rinkah", "Sakura", "Setsuna"],
   bff: ["Caeldori", "Mitama", "Selkie", "Ophelia"],
   sRank: ["Corrin (F)", "Corrin (M)", "Kana (M)", "Shigure", "Dwyer", "Shiro", "Kiragi", "Asugi", "Hisame", "Forrest", "Percy"],
+  sRankMod: [],
   baseHPGR: 40,
   baseStrGR: 15,
   baseMagGR: 60,
@@ -2334,15 +2547,26 @@ var rhajat = {
   sex: "F",
   isChild: true,
   isRoyal: false,
-  lr: ""
+  lr: "",
+  birthright: true,
+  conquest: false
 }
+
 var allUnits = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, kanaF, kanaM, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, yukimura, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat, fuga, anna]
-var allParents = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, anna, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, yukimura, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat, fuga, anna];
-var allFG = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, yukimura, fuga, anna];
-var allKiddies = [kanaF, kanaM, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat];
-var allC = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, anna, kanaF, kanaM, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina];
-var allB = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, yukimura, anna, kanaF, kanaM, dwyer, shigure, sophie, midori, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat];
-var allR = [corrinF, corrinM, felicia, jakob, kaze, azura, silas, shura, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, fuga, anna, kanaF, kanaM, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat];
+var allParents = allUnits.filter((unit) => unit.n != "Kana (M)" && unit.n != "Kana (F)")
+var allFG = allUnits.filter((unit) => !unit.isChild)
+var allKiddies = allUnits.filter((unit) => unit.isChild)
+var allC = allUnits.filter((unit) => unit.conquest)
+var allB = allUnits.filter((unit) => unit.birthright)
+var allR = allUnits
+
+// var allParents = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, anna, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, yukimura, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat, fuga, anna];
+// var allFG = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, yukimura, fuga, anna];
+// var allKiddies = [kanaF, kanaM, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat];
+// var allC = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, anna, kanaF, kanaM, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina];
+// var allB = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, izana, mozu, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, yukimura, anna, kanaF, kanaM, dwyer, shigure, sophie, midori, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat];
+// var allR = [corrinF, corrinM, gunter, felicia, jakob, kaze, azura, silas, shura, mozu, elise, arthur, effie, odin, niles, nyx, camilla, selena, beruka, laslow, peri, benny, charlotte, leo, keaton, xander, flora, rinkah, sakura, hana, subaki, saizo, orochi, hinoka, azama, setsuna, hayato, oboro, hinata, takumi, kagero, reina, kaden, ryoma, scarlet, fuga, anna, kanaF, kanaM, dwyer, shigure, sophie, midori, siegbert, forrest, ignatius, velouria, percy, ophelia, soleil, nina, shiro, kiragi, asugi, selkie, hisame, mitama, caeldori, rhajat];
+
 /* accepts unit object and returns array of unit's base growth rates */
 function getGRBaseArr(unit) {
   return [unit.baseHPGR, unit.baseStrGR, unit.baseMagGR, unit.baseSklGR, unit.baseSpdGR, unit.baseLckGR, unit.baseDefGR, unit.baseResGR];

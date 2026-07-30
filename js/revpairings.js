@@ -130,11 +130,12 @@ function gogogo() {
   $(".spl").each(function () { //for each s select
     var g = $("#game").val();
     var unit = getUnitO($(this).data("unit"));
+    var sRankable = unit.sRank.concat(unit.sRankMod)
     var noLove = document.createElement("option");
     $(noLove).val("-").text("-");
     $(this).append(noLove);
-    for (var i = 0; i < unit.sRank.length; i++) { //fill options
-      var x = getUnitO(unit.sRank[i]);
+    for (var i = 0; i < sRankable.length; i++) { //fill options
+      var x = getUnitO(sRankable[i]);
       if ((g == "r" && $.inArray(x, allR) != -1) || (g == "c" && $.inArray(x, allC) != -1) || (g == "b" && $.inArray(x, allB) != -1)) {
         var opt = document.createElement("option");
         $(opt).val(x.n).text(x.n);
