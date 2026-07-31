@@ -44,6 +44,15 @@ summary.header h2 {
   margin-bottom: 0;
 }
 
+fieldset > label {
+/* bg color? buttonesque? */
+  /* padding-left: var(--pico-spacing); */
+  font-size: .75rem;
+  margin: auto !important;
+  text-align: center;
+  vertical-align: middle;
+}
+
 thead {
   position: sticky;
   top: 0;
