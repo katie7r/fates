@@ -55,14 +55,18 @@
 </header>
 
 <main>
-  <div id="content">
+<div id="content">
+
+  <section>
     Select Your Game:
     <select id="game">
       <option value="r">Revelation</option>
       <option value="c">Conquest</option>
       <option value="b">Birthright</option>
     </select>
+  </section>
 
+  <section>
     <details name="corrin" open>
       <summary class="header"><h2>Corrin</h2></summary>
       <table id="corrinBoonBane">
@@ -75,7 +79,7 @@
           <td><select id="talentSelect" class="talentSelect"></select></td>
         </tr>
       </table>
-      <table id="corrinStats" class="lpad" unit="Corrin (F)">
+      <table id="corrinStats" unit="Corrin (F)">
         <tr>
           <td>Corrin's Bases</td>
           <td class="sv">HP</td>
@@ -111,7 +115,9 @@
         </tr>
       </table>
     </details>
+  </section>
 
+  <section>
     <details id="fg" name="fg" open>
       <summary class="header"><h2>First Generation Units</h2></summary>
       <ul>
@@ -123,35 +129,14 @@
         <li> Pair up bonuses shown are for S Rank partners only.</li>
         <li> In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and mounted promoted classes provide +1 movement.</li>
       </ul>
-      <div id="ffs" class="lpad">
-        <table id="firstGen"></table>
-      </div>
-    </details>
 
-    <details id="kids" name="kids" open>
-      <summary class="header"><h2>Child Units</h2></summary>
-      <ul>
-        <li> Mods shown when no second parent is selected assume the second parent will not be a child.</li>
-        <li> Classes from the second parent are always inherited first.</li>
-        <li> Royal units' names are followed by an asterisk.</li>
-        <li> Though the option will still be provided here, sibling units cannot S rank with each other.</li>
-        <li> Nohr Prince(ss), Wolfskin, Kitsune, and Villager can only be inherited from a parent.</li>
-        <li> Songstress cannot be inherited under any circumstances.</li>
-        <li> Base growth rates are independent of second parent and class.</li>
-        <li> Individual growth rates are calculated based on the selected second parent but do not consider the selected class.</li>
-        <li> If the unit has the Aptitude skill equipped, each stat's growth rate in game will be 10 higher than the value shown as the growth rate here.</li>
-        <li> Pair up bonuses shown are for S Rank partners only.</li>
-        <li> In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and mounted promoted classes provide +1 movement.</li>
-      </ul>
-      <div id="kds" class="lpad">
-        <table id="kiddies">
+      <div id="ffs">
+        <table id="firstGen">
           <thead>
-            <tr>
-              <th>Child</th>
-              <th>First Parent</th>
-              <th>Second Parent</th>
-              <th>A+ Rank</th>
+            <tr class="stats">
+              <th>Unit</th>
               <th>S Rank</th>
+              <th>A+ Rank</th>
               <th>Class</th>
               <th>Displaying</th>
               <th class="sv">HP</th>
@@ -168,8 +153,53 @@
         </table>
       </div>
     </details>
+  </section>
 
-  </div>
+  <section>
+    <details id="kids" name="kids" open>
+      <summary class="header"><h2>Child Units</h2></summary>
+      <ul>
+        <li> Mods shown when no second parent is selected assume the second parent will not be a child.</li>
+        <li> Classes from the second parent are always inherited first.</li>
+        <li> Royal units' names are followed by an asterisk.</li>
+        <li> Though the option will still be provided here, sibling units cannot S rank with each other.</li>
+        <li> Nohr Prince(ss), Wolfskin, Kitsune, and Villager can only be inherited from a parent.</li>
+        <li> Songstress cannot be inherited under any circumstances.</li>
+        <li> Base growth rates are independent of second parent and class.</li>
+        <li> Individual growth rates are calculated based on the selected second parent but do not consider the selected class.</li>
+        <li> If the unit has the Aptitude skill equipped, each stat's growth rate in game will be 10 higher than the value shown as the growth rate here.</li>
+        <li> Pair up bonuses shown are for S Rank partners only.</li>
+        <li> In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and mounted promoted classes provide +1 movement.</li>
+      </ul>
+
+      <div id="kds">
+        <table id="kiddies">
+          <thead>
+            <tr>
+              <th>Child</th>
+              <th>First Parent</th>
+              <th>Second Parent</th>
+              <th>S Rank</th>
+              <th>A+ Rank</th>
+              <th>Class</th>
+              <th>Displaying</th>
+              <th class="sv">HP</th>
+              <th class="sv">Str</th>
+              <th class="sv">Mag</th>
+              <th class="sv">Skl</th>
+              <th class="sv">Spd</th>
+              <th class="sv">Lck</th>
+              <th class="sv">Def</th>
+              <th class="sv">Res</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+</div>
 </main>
 
 <!--

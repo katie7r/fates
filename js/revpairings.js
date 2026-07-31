@@ -162,14 +162,14 @@ function createPage() {
       var secParSelect = document.createElement("select"); //make second parent select
       $(secParSelect).attr("id", kid + "SecPar").attr("data-unit", kiddo.n).addClass("sp"); //add attrs
       $(secParCol).append(secParSelect); //append to second parent select td
-      var apl = document.createElement("td"); //make td for apl select
-      var aplSelect = document.createElement("select"); //make apl select
-      $(aplSelect).attr("id", kid + "Apl").attr("data-unit", kiddo.n).addClass("apl");
-      $(apl).append(aplSelect);
       var spl = document.createElement("td"); //make td for spl select
       var splSelect = document.createElement("select"); //make spl select
       $(splSelect).attr("id", kid + "Spl").attr("data-unit", kiddo.n).addClass("spl");
       $(spl).append(splSelect);
+      var apl = document.createElement("td"); //make td for apl select
+      var aplSelect = document.createElement("select"); //make apl select
+      $(aplSelect).attr("id", kid + "Apl").attr("data-unit", kiddo.n).addClass("apl");
+      $(apl).append(aplSelect);
       var cl = document.createElement("td"); //make td for class select
       var clSelect = document.createElement("select"); //make class select
       $(clSelect).attr("id", kid + "Class").attr("data-unit", kiddo.n).addClass("clK"); //add attrs
@@ -178,13 +178,13 @@ function createPage() {
       var typeSelect = document.createElement("select"); //make type select
       $(typeSelect).attr("id", kid + "Type").attr("data-unit", kiddo.n).addClass("typeK"); //add attrs
       $(type).append(typeSelect); //append to type td
-      $(row).append(kidName).append(fp).append(secParCol).append(apl).append(spl).append(cl).append(type); //append tds to tr
+      $(row).append(kidName).append(fp).append(secParCol).append(spl).append(apl).append(cl).append(type); //append tds to tr
       for (var j = 0; j < statArr.length; j++) { //for each stat
         var statCol = document.createElement("td"); //create td for stat display
         $(statCol).attr("id", kid + statArr[j]).addClass("sv"); //add attrs
         $(row).append(statCol); //append to row
       }
-      $("#kiddies").append(row); //append row to table
+      $("#kiddies tbody").append(row); //append row to table
     }
   }
 }
@@ -573,27 +573,6 @@ function createFG() {
     var unit = allFG[i];
     if ((g == "r" && $.inArray(unit, allR) != -1) || (g == "c" && $.inArray(unit, allC) != -1) || (g == "b" && $.inArray(unit, allB) != -1)) {
       var unitV = unit.vName;
-      if (k % 20 == 0) {
-        var header = document.createElement("tr");
-        $(header).addClass("stats");
-        var utd = document.createElement("td");
-        $(utd).text("Unit");
-        var atd = document.createElement("td");
-        $(atd).text("A+ Rank");
-        var srtd = document.createElement("td");
-        $(srtd).text("S Rank");
-        var ctd = document.createElement("td");
-        $(ctd).text("Class");
-        var ttd = document.createElement("td");
-        $(ttd).text("Displaying");
-        $(header).append(utd).append(atd).append(srtd).append(ctd).append(ttd);
-        for (var j = 0; j < statArr.length; j++) {
-          var sv = document.createElement("td");
-          $(sv).addClass("sv").text(statArr[j]);
-          $(header).append(sv);
-        }
-        $("#firstGen").append(header);
-      }
       var row = document.createElement("tr"); //made tr for fg
       $(row).attr("id", unitV + "Stats").addClass("stats"); //assign props
       if (k % 2 == 0) { //if even
@@ -609,14 +588,14 @@ function createFG() {
       else {
         $(fgName).addClass("n").text(unit.n); //assign props
       }
-      var apl = document.createElement("td"); //make td for apl select
-      var aplSelect = document.createElement("select"); //make apl select
-      $(aplSelect).attr("id", unitV + "Apl").attr("data-unit", unit.n).addClass("apl");
-      $(apl).append(aplSelect);
       var spl = document.createElement("td"); //make td for spl select
       var splSelect = document.createElement("select"); //make spl select
       $(splSelect).attr("id", unitV + "Spl").attr("data-unit", unit.n).addClass("spl");
       $(spl).append(splSelect);
+      var apl = document.createElement("td"); //make td for apl select
+      var aplSelect = document.createElement("select"); //make apl select
+      $(aplSelect).attr("id", unitV + "Apl").attr("data-unit", unit.n).addClass("apl");
+      $(apl).append(aplSelect);
       var cl = document.createElement("td"); //make td for class select
       var clSelect = document.createElement("select"); //make class select for fg
       $(clSelect).attr("id", unitV + "Class").attr("data-unit", unit.n).addClass("clF"); //assign props
@@ -625,14 +604,14 @@ function createFG() {
       var typeSelect = document.createElement("select"); //make display select
       $(typeSelect).attr("id", unitV + "Type").attr("data-unit", unit.n).addClass("typeF"); //assign props
       $(type).append(typeSelect); //append to td
-      $(row).append(fgName).append(apl).append(spl).append(cl).append(type); //append to row
+      $(row).append(fgName).append(spl).append(apl).append(cl).append(type); //append to row
       for (var j = 0; j < statArr.length; j++) { //for each stat
         var statCol = document.createElement("td"); //create td for stat display
         $(statCol).attr("id", unitV + statArr[j]).addClass("sv"); //add attrs
         $(row).append(statCol); //append to row
       }
       k++;
-      $("#firstGen").append(row); //append to table
+      $("#firstGen tbody").append(row); //append to table
     }
   }
 }
