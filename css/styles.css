@@ -8,6 +8,10 @@
   --pico-outline-width: 0.1rem;
 }
 
+hgroup h1 {
+  padding-right: 7rem;
+}
+
 hgroup small {
   color: var(--pico-muted-color);
 }
