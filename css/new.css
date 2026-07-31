@@ -43,4 +43,17 @@ summary.header h2 {
 thead {
   position: sticky;
   top: 0;
+  z-index: 1;
 }
+
+tr > td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 0;
+}
+
+/* TODO: figure out table fix without breaking sticky headers... rowspans? idk */
+/* .overflow-auto {
+  overflow: auto;
+  width: 100%;
+} */
