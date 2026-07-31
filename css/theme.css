@@ -126,3 +126,16 @@
   --pico-primary-inverse: #fff;
   --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
 }
+
+/* INHERITANCE APPLICABLE TO ALL */
+
+:root,
+.birthright,
+.conquest,
+.revelation {
+  --pico-form-element-border-color: var(--pico-primary);
+  --pico-form-element-focus-color: var(--pico-primary);
+  --pico-primary-background: var(--pico-primary);
+  --pico-primary-border: var(--pico-primary);
+  --pico-primary-hover-background: var(--pico-primary-hover);
+}
