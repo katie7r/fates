@@ -1,0 +1,128 @@
+/* REVELATION [default] (pico.cyan.css) */
+
+[data-theme=light],
+:root:not([data-theme=dark]),
+:host:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(5, 162, 162, .25);
+  --pico-primary: #047878;
+  --pico-primary-background: #047878;
+  --pico-primary-underline: rgba(4, 120, 120, .5);
+  --pico-primary-hover: #025d5d;
+  --pico-primary-hover-background: #046a6a;
+  --pico-primary-focus: rgba(5, 162, 162, .5);
+  --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host:not([data-theme]) {
+    --pico-text-selection-color: rgba(10, 177, 177, .1875);
+    --pico-primary: #0ab1b1;
+    --pico-primary-background: #047878;
+    --pico-primary-underline: rgba(10, 177, 177, .5);
+    --pico-primary-hover: #0ccece;
+    --pico-primary-hover-background: #058686;
+    --pico-primary-focus: rgba(10, 177, 177, .375);
+    --pico-primary-inverse: #fff;
+    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  }
+}
+
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(10, 177, 177, .1875);
+  --pico-primary: #0ab1b1;
+  --pico-primary-background: #047878;
+  --pico-primary-underline: rgba(10, 177, 177, .5);
+  --pico-primary-hover: #0ccece;
+  --pico-primary-hover-background: #058686;
+  --pico-primary-focus: rgba(10, 177, 177, .375);
+  --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+}
+
+/* BIRTHRIGHT (pico.red.css) */
+
+[data-theme=light] .birthright,
+:root:not([data-theme=dark]) .birthright,
+:host:not([data-theme=dark]) .birthright {
+  --pico-text-selection-color: rgba(240, 96, 72, .25);
+  --pico-primary: #c52f21;
+  --pico-primary-background: #c52f21;
+  --pico-primary-underline: rgba(197, 47, 33, .5);
+  --pico-primary-hover: #9b2318;
+  --pico-primary-hover-background: #af291d;
+  --pico-primary-focus: rgba(240, 96, 72, .5);
+  --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .birthright,
+  :host:not([data-theme]) .birthright {
+    --pico-text-selection-color: rgba(241, 121, 97, .1875);
+    --pico-primary: #f17961;
+    --pico-primary-background: #c52f21;
+    --pico-primary-underline: rgba(241, 121, 97, .5);
+    --pico-primary-hover: #f5a390;
+    --pico-primary-hover-background: #d93526;
+    --pico-primary-focus: rgba(241, 121, 97, .375);
+    --pico-primary-inverse: #fff;
+    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  }
+}
+
+[data-theme=dark] .birthright {
+  --pico-text-selection-color: rgba(241, 121, 97, .1875);
+  --pico-primary: #f17961;
+  --pico-primary-background: #c52f21;
+  --pico-primary-underline: rgba(241, 121, 97, .5);
+  --pico-primary-hover: #f5a390;
+  --pico-primary-hover-background: #d93526;
+  --pico-primary-focus: rgba(241, 121, 97, .375);
+  --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+}
+
+/* CONQUEST (pico.violet.css) */
+
+[data-theme=light] .conquest,
+:root:not([data-theme=dark]) .conquest,
+:host:not([data-theme=dark]) .conquest {
+  --pico-text-selection-color: rgba(167, 128, 212, .25);
+  --pico-primary: #8352c5;
+  --pico-primary-background: #7540bf;
+  --pico-primary-underline: rgba(131, 82, 197, .5);
+  --pico-primary-hover: #6935b3;
+  --pico-primary-hover-background: #6935b3;
+  --pico-primary-focus: rgba(167, 128, 212, .5);
+  --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .conquest,
+  :host:not([data-theme]) .conquest {
+    --pico-text-selection-color: rgba(178, 144, 217, .1875);
+    --pico-primary: #b290d9;
+    --pico-primary-background: #7540bf;
+    --pico-primary-underline: rgba(178, 144, 217, .5);
+    --pico-primary-hover: #c9afe4;
+    --pico-primary-hover-background: #8352c5;
+    --pico-primary-focus: rgba(178, 144, 217, .375);
+    --pico-primary-inverse: #fff;
+    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  }
+}
+
+[data-theme=dark] .conquest {
+  --pico-text-selection-color: rgba(178, 144, 217, .1875);
+  --pico-primary: #b290d9;
+  --pico-primary-background: #7540bf;
+  --pico-primary-underline: rgba(178, 144, 217, .5);
+  --pico-primary-hover: #c9afe4;
+  --pico-primary-hover-background: #8352c5;
+  --pico-primary-focus: rgba(178, 144, 217, .375);
+  --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+}

@@ -6,14 +6,9 @@
   */
   --pico-font-size: 18px;
   --pico-outline-width: 0.1rem;
-
-  /* default same as .revelation */
-  --pico-primary: #19687c;
-  --pico-primary-hover: #115464;
-  --pico-primary-underline: #2a7b8f;
 }
 
-h1 small {
+hgroup small {
   color: var(--pico-muted-color);
 }
 
@@ -22,39 +17,25 @@ h2 {
   font-size: 1.5rem;
 }
 
+label[for="theme"] {
+  position: absolute;
+  top: var(--pico-spacing);
+  right: var(--pico-spacing);
+}
+
+label[for="theme"] [aria-label] {
+  font-size: 1.5rem;
+  margin-inline-end: .5rem;
+}
+
+label[for="theme"] input {
+  margin-bottom: 0.5rem;
+}
+
 summary.header::after {
   height: 1.5rem;
 }
 
 summary.header h2 {
   margin-bottom: 0;
-}
-
-.birthright {
-  --pico-primary: #661616;
-  --pico-primary-hover: #4d0707;
-  --pico-primary-underline: #742222;
-}
-
-.conquest {
-  --pico-primary: #552266;
-  --pico-primary-hover: #3d144b;
-  --pico-primary-underline: #683579;
-}
-
-.revelation {
-  --pico-primary: #19687c;
-  --pico-primary-hover: #115464;
-  --pico-primary-underline: #2a7b8f;
-}
-
-:root,
-.birthright,
-.conquest,
-.revelation {
-  --pico-form-element-border-color: var(--pico-primary);
-  --pico-form-element-focus-color: var(--pico-primary);
-  --pico-primary-background: var(--pico-primary);
-  --pico-primary-border: var(--pico-primary);
-  --pico-primary-hover-background: var(--pico-primary-hover);
 }
