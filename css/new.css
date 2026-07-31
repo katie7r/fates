@@ -13,6 +13,10 @@
   --pico-primary-underline: #2a7b8f;
 }
 
+h1 small {
+  color: var(--pico-muted-color);
+}
+
 h2 {
   display: inline-block;
   font-size: 1.5rem;
