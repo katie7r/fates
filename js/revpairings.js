@@ -1,7 +1,8 @@
-//revpairings.js
-/* baby app to calculate stat mods, growth rates, max stats, and class inheritance for fe fates units. matchmake away!
- *
+/* OG:
+ * baby app to calculate stat mods, growth rates, max stats, and class inheritance for fe fates units. matchmake away!
  * Sophie Laupheimer
+ *
+ * v2: ...
  */
 "use strict";
 $(document).ready(function () { //on document load
@@ -16,28 +17,7 @@ function gogo() {
   $("#boonSelect").change(updateBoonBane); //assign event handler
   $("#baneSelect").change(updateBoonBane); //""
   $("#talentSelect").change(updateTalent); //""
-  $("#toggleFG").click(function () { //assign event handler
-    $("#ffs").toggle(); //hide or expand first gen table
-    if ($(this).text() == "-") { //if was expanded
-      $(this).text("+");
-      $("#fgShowHide").text("Show");
-    }
-    else { //otherwise
-      $(this).text("-");
-      $("#fgShowHide").text("Hide");
-    }
-  });
-  $("#toggleK").click(function () { //assign event handler
-    $("#kds").toggle(); //hides or expands kid table
-    if ($(this).text() == "-") { //if was expanded
-      $(this).text("+");
-      $("#kidsShowHide").text("Show");
-    }
-    else { //otherwise
-      $(this).text("-");
-      $("#kidsShowHide").text("Hide");
-    }
-  });
+
   $("#game").change(function () {
     $(".stats").each(function () {
       this.remove();
@@ -46,8 +26,10 @@ function gogo() {
     createFG();
     updateTalent();
     gogogo();
-  });
 
+    $("body").removeClass(["birthright", "conquest", "revelation"])
+    $("body").addClass($(this).val() == "b" ? "birthright" : ($(this).val() == "c" ? "conquest" : "revelation"))
+  });
 }
 function gogogo() {
   $(".typeK").each(function () { //for each display option
