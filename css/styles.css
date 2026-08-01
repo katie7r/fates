@@ -76,8 +76,73 @@ tbody th {
   z-index: 0;
 }
 
+th p,
+td p {
+  padding: var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);
+  white-space: nowrap;
+}
+
+th select,
+td select {
+  background-position: center right .2rem !important;
+}
+
 /* TODO: figure out table fix without breaking sticky headers... rowspans? idk */
 /* .overflow-auto {
   overflow: auto;
   width: 100%;
 } */
+
+/* TODO: better names */
+
+select.clK,
+select.sp,
+select.spl,
+select.apl {
+  min-width: 7rem;
+  /* max-width: 10rem; */
+}
+
+.spl-wrapper,
+.apl-wrapper {
+  display: block;
+  position: relative;
+}
+
+.spl-wrapper select,
+.apl-wrapper select {
+  display: inline-block;
+}
+
+.spl-wrapper::before,
+.apl-wrapper::before {
+  display: inline-block;
+  color: var(--pico-primary-focus);
+  /* font-size: .5rem; */
+  position: absolute;
+  left: 0.25rem;
+  top: -.25rem;
+  /* height: 1rem; */
+}
+
+.spl-wrapper::before {
+  /* content: "🅢"; */
+  content: "♡";
+}
+
+.apl-wrapper::before {
+  /* content: "🅐"; */
+  content: "☆";
+}
+
+select.typeK {
+  height: 5rem;
+  white-space: normal;
+  width: 7rem;
+}
+
+.sv {
+  font-family: var(--pico-font-family-monospace);
+  min-width: 4.5rem !important;
+  width: 4.5rem !important;
+}

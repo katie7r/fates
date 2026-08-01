@@ -362,6 +362,10 @@ function getSRankOptions(unit) {
   // TODO: toggle on page for whether to use modded options or just vanilla
   return unit ? unit.sRankVanilla.concat(unit.sRankModded) : []
 }
+// get name with royal indicator if applicable
+function nameWithRoyalIndicator(unit) {
+  return `${unit.n}${unit.isRoyal ? "*" : ""}`;
+}
 
 // CORRIN --------------
 
@@ -619,57 +623,71 @@ function createKids() {
   var g = $("#game").val();
   for (var i = 0; i < allKiddies.length; i++) { //for each kid
     var kiddo = allKiddies[i];
-    if ((g == "r" && $.inArray(kiddo, allR) != -1) || (g == "c" && $.inArray(kiddo, allC) != -1) || (g == "b" && $.inArray(kiddo, allB) != -1)) {
+    if (g == "r" || (g == "c" && kiddo.conquest) || (g == "b" && kiddo.birthright)) {
       var kid = kiddo.vName;
-      var row = document.createElement("tr") //make table row for kid
+      var row = document.createElement("tr");
       $(row).attr("id", kid + "Stats").addClass("stats"); //add attrs
-      if (i % 2 == 0) { //if even
-        $(row).addClass("even"); //add even class
-      }
-      else { //if odd
-        $(row).addClass("odd"); //add odd class
-      }
-      var kidName = document.createElement("th"); //make table column for kid name
-      if (kiddo.isRoyal) { //if royal
-        $(kidName).attr("id", kid + "Name").addClass("n").text(kiddo.n + "*"); //add attrs
-      }
-      else {
-        $(kidName).attr("id", kid + "Name").addClass("n").text(kiddo.n); //add attrs
-      }
-      var fp = document.createElement("td"); //make td for first parent name
-      if (kiddo.firstParent.isRoyal) {
-        $(fp).addClass("n").text(kiddo.firstParent.n + "*"); //add attrs
-      }
-      else {
-        $(fp).addClass("n").text(kiddo.firstParent.n); //add attrs
-      }
-      var secParCol = document.createElement("td"); //make td for second parent select
-      var secParSelect = document.createElement("select"); //make second parent select
-      $(secParSelect).attr("id", kid + "SecPar").attr("data-unit", kiddo.n).addClass("sp"); //add attrs
-      $(secParCol).append(secParSelect); //append to second parent select td
-      var spl = document.createElement("td"); //make td for spl select
-      var splSelect = document.createElement("select"); //make spl select
-      $(splSelect).attr("id", kid + "Spl").attr("data-unit", kiddo.n).addClass("spl");
-      $(spl).append(splSelect);
-      var apl = document.createElement("td"); //make td for apl select
-      var aplSelect = document.createElement("select"); //make apl select
-      $(aplSelect).attr("id", kid + "Apl").attr("data-unit", kiddo.n).addClass("apl");
-      $(apl).append(aplSelect);
-      var cl = document.createElement("td"); //make td for class select
-      var clSelect = document.createElement("select"); //make class select
-      $(clSelect).attr("id", kid + "Class").attr("data-unit", kiddo.n).addClass("clK"); //add attrs
-      $(cl).append(clSelect); //append to class td
+
+      // Child
+
+      var thChild = document.createElement("th");
+
+      var pKidName = document.createElement("p");
+      var kidName = nameWithRoyalIndicator(kiddo);
+      $(pKidName).text(kidName);
+      var classSelect = document.createElement("select");
+      $(classSelect).attr("id", kid + "Class").attr("data-unit", kiddo.n).addClass("clK");
+
+      $(thChild).attr("id", kid + "Name").addClass("n")
+      $(thChild).append(pKidName).append(classSelect);
+      $(row).append(thChild);
+
+      // Parents
+
+      var tdParents = document.createElement("td");
+
+      var pParentName = document.createElement("p");
+      var parentName = nameWithRoyalIndicator(kiddo.firstParent);
+      $(pParentName).text(parentName);
+      var secondParentSelect = document.createElement("select");
+      $(secondParentSelect).attr("id", kid + "SecPar").attr("data-unit", kiddo.n).addClass("sp");
+
+      $(tdParents).addClass("n")
+      $(tdParents).append(pParentName).append(secondParentSelect);
+      $(row).append(tdParents);
+
+      // Supports
+
+      var tdSupports = document.createElement("td");
+
+      var sSupports = document.createElement("span");
+      var sSupportSelect = document.createElement("select");
+      $(sSupportSelect).attr("id", kid + "Spl").attr("data-unit", kiddo.n).addClass("spl");
+      $(sSupports).addClass("spl-wrapper").append(sSupportSelect);
+
+      var aSupports = document.createElement("span");
+      var aSupportSelect = document.createElement("select");
+      $(aSupportSelect).attr("id", kid + "Apl").attr("data-unit", kiddo.n).addClass("apl");
+      $(aSupports).addClass("apl-wrapper").append(aSupportSelect);
+
+
+      $(tdSupports).append(sSupports).append(aSupports);
+      $(row).append(tdSupports);
+
+      // Stats
+
       var type = document.createElement("td"); //make td for type select
       var typeSelect = document.createElement("select"); //make type select
       $(typeSelect).attr("id", kid + "Type").attr("data-unit", kiddo.n).addClass("typeK"); //add attrs
       $(type).append(typeSelect); //append to type td
-      $(row).append(kidName).append(fp).append(secParCol).append(spl).append(apl).append(cl).append(type); //append tds to tr
+      $(row).append(type);
+
       for (var j = 0; j < STATS.length; j++) { //for each stat
         var statCol = document.createElement("td"); //create td for stat display
         $(statCol).attr("id", kid + STATS[j]).addClass("sv"); //add attrs
         $(row).append(statCol); //append to row
       }
-      $("#kiddies tbody").append(row); //append row to table
+      $("#kiddies tbody").append(row);
     }
   }
 }
@@ -766,13 +784,10 @@ function updateView(kid) {
   var grArr = getGRArrU(kid);
   var grArrC = getGRArrC(cl);
   var maxClArr = getMaxStatArr(cl);
-  $("#" + v + "Name").empty();
-  if (kid.isRoyal) { //if royal
-    $("#" + v + "Name").text(kid.n + "*");
-  }
-  else {
-    $("#" + v + "Name").text(kid.n);
-  }
+
+  var kidName = nameWithRoyalIndicator(kid);
+  $("#" + v + "Name p").empty().text(kidName);
+
   for (var i = 0; i < STATS.length; i++) { //for each stat
     var j; //initialize j-- mod, gr, or max stat value
     if ($("#" + v + "Type").val() == "mods") {//if mods selected
