@@ -467,6 +467,8 @@ function updateTalent() {
       clDir("spl", unit);
     }
   });
+
+  // TODO: effective growth rates with class?
 }
 /* returns selected boon object */
 function getBoon() {
@@ -530,7 +532,7 @@ function createFG() {
       else { //if odd
         $(row).addClass("odd"); //add odd class
       }
-      var fgName = document.createElement("td"); //make td to display name
+      var fgName = document.createElement("th"); //make td to display name
       if (unit.isRoyal) {
         $(fgName).addClass("n").text(unit.n + "*"); //assign props
       }
@@ -627,7 +629,7 @@ function createKids() {
       else { //if odd
         $(row).addClass("odd"); //add odd class
       }
-      var kidName = document.createElement("td"); //make table column for kid name
+      var kidName = document.createElement("th"); //make table column for kid name
       if (kiddo.isRoyal) { //if royal
         $(kidName).attr("id", kid + "Name").addClass("n").text(kiddo.n + "*"); //add attrs
       }

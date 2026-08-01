@@ -75,7 +75,7 @@ thead {
   z-index: 1;
 }
 
-tr > td:first-child {
+tbody th {
   position: sticky;
   left: 0;
   z-index: 0;
