@@ -78,6 +78,7 @@ tbody th {
 
 th p,
 td p {
+  margin-bottom: 0;
   padding: var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);
   white-space: nowrap;
 }
@@ -85,6 +86,13 @@ td p {
 th select,
 td select {
   background-position: center right .2rem !important;
+  margin-bottom: 0;
+}
+
+th p + select,
+td p + select,
+td span + span {
+  margin-top: .5rem;
 }
 
 /* TODO: figure out table fix without breaking sticky headers... rowspans? idk */
@@ -136,7 +144,8 @@ select.apl {
 }
 
 select.typeK {
-  height: 5rem;
+  height: 4.5rem;
+  padding-right: .5rem;
   white-space: normal;
   width: 7rem;
 }
