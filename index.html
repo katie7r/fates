@@ -58,18 +58,9 @@
 <div id="content">
 
   <section>
-    <!--
-    Select Your Game:
-    <select id="game">
-      <option value="r">Revelation</option>
-      <option value="c">Conquest</option>
-      <option value="b">Birthright</option>
-    </select>
-    -->
-
     <fieldset role="group">
       <label for="game">Select Game</label>
-      <select id="game" name="game">
+      <select id="game">
         <option value="r">Revelation</option>
         <option value="c">Conquest</option>
         <option value="b">Birthright</option>
@@ -80,17 +71,25 @@
   <section>
     <details name="corrin" open>
       <summary class="header"><h2>Corrin</h2></summary>
-      <table id="corrinBoonBane">
-        <tr>
-          <td>Boon:</td>
-          <td><select id="boonSelect" class="boonSelect"></select></td>
-          <td>Bane:</td>
-          <td><select id="baneSelect" class="baneSelect"></select></td>
-          <td>Talent:</td>
-          <td><select id="talentSelect" class="talentSelect"></select></td>
-        </tr>
-      </table>
-      <table id="corrinStats" unit="Corrin (F)">
+
+      <div class="inline-grid">
+        <fieldset role="group" class="inline">
+          <label for="boonSelect">Boon</label>
+          <select id="boonSelect"></select>
+        </fieldset>
+
+        <fieldset role="group" class="inline">
+          <label for="baneSelect">Bane</label>
+          <select id="baneSelect"></select>
+        </fieldset>
+
+        <fieldset role="group" class="inline">
+          <label for="talentSelect">Talent</label>
+          <select id="talentSelect"></select>
+        </fieldset>
+      </div>
+
+      <table id="" class="" unit="Corrin (F)">
         <tr>
           <td>Corrin's Bases</td>
           <td class="sv">HP</td>
