@@ -1,3 +1,19 @@
+:root {
+  /*
+  --pico-font-family-sans-serif: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
+  --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--pico-font-family-emoji);
+  --pico-font-family: var(--pico-font-family-sans-serif);
+  */
+  --pico-font-size: 16px;
+  --pico-outline-width: 0.1rem;
+}
+
+header,
+main,
+footer {
+  max-width: calc(100% - (var(--pico-spacing) * 4)) !important;
+}
+
 /* REVELATION [default] (pico.cyan.css) */
 
 [data-theme=light],

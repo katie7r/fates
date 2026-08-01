@@ -1,13 +1,3 @@
-:root {
-  /*
-  --pico-font-family-sans-serif: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
-  --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--pico-font-family-emoji);
-  --pico-font-family: var(--pico-font-family-sans-serif);
-  */
-  --pico-font-size: 18px;
-  --pico-outline-width: 0.1rem;
-}
-
 hgroup h1 {
   padding-right: 7rem;
 }
@@ -67,6 +57,11 @@ fieldset > label {
 
 fieldset select {
   margin: calc(var(--pico-border-width * -1));
+}
+
+table {
+  --pico-form-element-spacing-horizontal: 0.4rem;
+  --pico-form-element-spacing-vertical: 0.2rem;
 }
 
 thead {
