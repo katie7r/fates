@@ -25,7 +25,7 @@ function gogo() {
     $(".stats").each(function () {
       this.remove();
     });
-    createPage();
+    createKids();
     createFG();
     updateTalent();
     gogogo();
