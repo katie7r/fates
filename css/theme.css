@@ -11,7 +11,7 @@
   --pico-primary-hover-background: #046a6a;
   --pico-primary-focus: rgba(5, 162, 162, .5);
   --pico-primary-inverse: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -25,7 +25,7 @@
     --pico-primary-hover-background: #058686;
     --pico-primary-focus: rgba(10, 177, 177, .375);
     --pico-primary-inverse: #fff;
-    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 
@@ -38,7 +38,7 @@
   --pico-primary-hover-background: #058686;
   --pico-primary-focus: rgba(10, 177, 177, .375);
   --pico-primary-inverse: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 /* BIRTHRIGHT (pico.red.css) */
@@ -54,7 +54,8 @@
   --pico-primary-hover-background: #af291d;
   --pico-primary-focus: rgba(240, 96, 72, .5);
   --pico-primary-inverse: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-form-element-border-color: #c52f21;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -68,7 +69,8 @@
     --pico-primary-hover-background: #d93526;
     --pico-primary-focus: rgba(241, 121, 97, .375);
     --pico-primary-inverse: #fff;
-    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    --pico-form-element-border-color: #f17961;
   }
 }
 
@@ -81,7 +83,8 @@
   --pico-primary-hover-background: #d93526;
   --pico-primary-focus: rgba(241, 121, 97, .375);
   --pico-primary-inverse: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-form-element-border-color: #f17961;
 }
 
 /* CONQUEST (pico.violet.css) */
@@ -97,7 +100,8 @@
   --pico-primary-hover-background: #6935b3;
   --pico-primary-focus: rgba(167, 128, 212, .5);
   --pico-primary-inverse: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-form-element-border-color: #8352c5;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -111,7 +115,8 @@
     --pico-primary-hover-background: #8352c5;
     --pico-primary-focus: rgba(178, 144, 217, .375);
     --pico-primary-inverse: #fff;
-    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    --pico-form-element-border-color: #b290d9;
   }
 }
 
@@ -124,7 +129,8 @@
   --pico-primary-hover-background: #8352c5;
   --pico-primary-focus: rgba(178, 144, 217, .375);
   --pico-primary-inverse: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-form-element-border-color: #b290d9;
 }
 
 /* INHERITANCE APPLICABLE TO ALL */
@@ -133,9 +139,10 @@
 .birthright,
 .conquest,
 .revelation {
-  --pico-form-element-border-color: var(--pico-primary);
+  --pico-form-element-active-border-color: var(--pico-primary);
   --pico-form-element-focus-color: var(--pico-primary);
-  --pico-primary-background: var(--pico-primary);
+  --pico-group-box-shadow: var(--pico-form-element-border-color);
   --pico-primary-border: var(--pico-primary);
-  --pico-primary-hover-background: var(--pico-primary-hover);
+  --pico-primary-hover-background: var(--pico-primary-underline);
+  --pico-primary-hover-underline: var(--pico-primary-underline);
 }
