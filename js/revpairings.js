@@ -656,6 +656,20 @@ function createKids() {
       $(tdParents).append(pParentName).append(secondParentSelect);
       $(row).append(tdParents);
 
+      // Stats
+
+      for (var j = 0; j < STATS.length; j++) { //for each stat
+        var statCol = document.createElement("td"); //create td for stat display
+        $(statCol).attr("id", kid + STATS[j]).addClass("sv"); //add attrs
+        $(row).append(statCol); //append to row
+      }
+
+      var type = document.createElement("td"); //make td for type select
+      var typeSelect = document.createElement("select"); //make type select
+      $(typeSelect).attr("id", kid + "Type").attr("data-unit", kiddo.n).addClass("typeK"); //add attrs
+      $(type).append(typeSelect); //append to type td
+      $(row).append(type);
+
       // Supports
 
       var tdSupports = document.createElement("td");
@@ -670,23 +684,9 @@ function createKids() {
       $(aSupportSelect).attr("id", kid + "Apl").attr("data-unit", kiddo.n).addClass("apl");
       $(aSupports).addClass("apl-wrapper").append(aSupportSelect);
 
-
       $(tdSupports).append(sSupports).append(aSupports);
       $(row).append(tdSupports);
 
-      // Stats
-
-      var type = document.createElement("td"); //make td for type select
-      var typeSelect = document.createElement("select"); //make type select
-      $(typeSelect).attr("id", kid + "Type").attr("data-unit", kiddo.n).addClass("typeK"); //add attrs
-      $(type).append(typeSelect); //append to type td
-      $(row).append(type);
-
-      for (var j = 0; j < STATS.length; j++) { //for each stat
-        var statCol = document.createElement("td"); //create td for stat display
-        $(statCol).attr("id", kid + STATS[j]).addClass("sv"); //add attrs
-        $(row).append(statCol); //append to row
-      }
       $("#kiddies tbody").append(row);
     }
   }
