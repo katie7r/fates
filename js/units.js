@@ -1051,7 +1051,7 @@ var saizo = {
   baseClass: ["Ninja", "Samurai"],
   bff: ["Ryoma", "Subaki", "Kaze", "Laslow"],
   sRankVanilla: ["Corrin (F)", "Felicia", "Azura", "Mozu", "Hinoka", "Sakura", "Rinkah", "Orochi", "Kagero", "Hana", "Setsuna", "Oboro", "Charlotte", "Beruka"],
-  sRankModded: [],
+  sRankModded: ["Anna", "Corrin (M)", "Flora", "Izana", "Jakob", "Silas", "Shura", "Camilla", "Laslow", "Leo", "Niles", "Odin", "Peri", "Selena", "Xander", "Kaden", "Ryoma", "Subaki", "Takumi", "Yukimura"],
   strMod: 1,
   magMod: 0,
   sklMod: 3,

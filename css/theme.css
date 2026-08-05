@@ -161,4 +161,5 @@ footer {
   --pico-primary-border: var(--pico-primary);
   --pico-primary-hover-background: var(--pico-primary-underline);
   --pico-primary-hover-underline: var(--pico-primary-underline);
+  --pico-switch-checked-background-color: var(--pico-primary);
 }
