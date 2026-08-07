@@ -26,14 +26,6 @@ label[for="theme"] input {
   margin-bottom: 0.5rem;
 }
 
-summary.header::after {
-  height: 1.5rem;
-}
-
-summary.header h2 {
-  margin-bottom: 0;
-}
-
 .inline-grid {
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -59,13 +51,21 @@ fieldset select {
   margin: calc(var(--pico-border-width * -1));
 }
 
+section input[role=switch] {
+  margin-bottom: 0.5rem;
+}
+
+section input[role=switch]:not(:checked) ~ .table-wrapper {
+  height: 0;
+}
+
 .table-wrapper {
-  max-height: calc(100vh - (var(--pico-spacing) * 02));
+  max-height: calc(100vh - (var(--pico-spacing) * 2.5));
   max-width: 100vw;
   overflow-x: auto;
   overflow-y: auto;
 
-  /* TODO: breakpoint'd */
+  /* TODO: breakpoint'd? */
 
   margin-left: calc(var(--pico-spacing) * -1);
   margin-right: calc(var(--pico-spacing) * -1);

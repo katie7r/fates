@@ -69,67 +69,76 @@
   </section>
 
   <section>
-    <details name="corrin" open>
-      <summary class="header"><h2>Corrin</h2></summary>
+    <h2>Corrin</h2>
 
-      <div class="inline-grid">
-        <fieldset role="group" class="inline">
-          <label for="boonSelect">Boon</label>
-          <select id="boonSelect"></select>
-        </fieldset>
+    <div class="inline-grid">
+      <fieldset role="group" class="inline">
+        <label for="boonSelect">Boon</label>
+        <select id="boonSelect"></select>
+      </fieldset>
 
-        <fieldset role="group" class="inline">
-          <label for="baneSelect">Bane</label>
-          <select id="baneSelect"></select>
-        </fieldset>
+      <fieldset role="group" class="inline">
+        <label for="baneSelect">Bane</label>
+        <select id="baneSelect"></select>
+      </fieldset>
 
-        <fieldset role="group" class="inline">
-          <label for="talentSelect">Talent</label>
-          <select id="talentSelect"></select>
-        </fieldset>
-      </div>
+      <fieldset role="group" class="inline">
+        <label for="talentSelect">Talent</label>
+        <select id="talentSelect"></select>
+      </fieldset>
+    </div>
 
-      <table id="" class="" unit="Corrin (F)">
-        <tr>
-          <td>Corrin's Bases</td>
-          <td class="sv">HP</td>
-          <td class="sv">Str</td>
-          <td class="sv">Mag</td>
-          <td class="sv">Skl</td>
-          <td class="sv">Spd</td>
-          <td class="sv">Lck</td>
-          <td class="sv">Def</td>
-          <td class="sv">Res</td>
-        </tr>
-        <tr class="odd">
-          <td>Stat Modifiers</td>
-          <td id="corrinHP" class="sv"></td>
-          <td id="corrinStr" class="sv"></td>
-          <td id="corrinMag" class="sv"></td>
-          <td id="corrinSkl" class="sv"></td>
-          <td id="corrinSpd" class="sv"></td>
-          <td id="corrinLck" class="sv"></td>
-          <td id="corrinDef" class="sv"></td>
-          <td id="corrinRes" class="sv"></td>
-        </tr>
-        <tr class="even">
-          <td>Growth Rates</td>
-          <td id="corrinHPGR" class="sv"></td>
-          <td id="corrinStrGR" class="sv"></td>
-          <td id="corrinMagGR" class="sv"></td>
-          <td id="corrinSklGR" class="sv"></td>
-          <td id="corrinSpdGR" class="sv"></td>
-          <td id="corrinLckGR" class="sv"></td>
-          <td id="corrinDefGR" class="sv"></td>
-          <td id="corrinResGR" class="sv"></td>
-        </tr>
+    <div class="table-wrapper">
+      <table unit="Corrin (F)">
+        <thead>
+          <tr>
+            <th>Corrin's Bases</th>
+            <th class="sv">HP</th>
+            <th class="sv">Str</th>
+            <th class="sv">Mag</th>
+            <th class="sv">Skl</th>
+            <th class="sv">Spd</th>
+            <th class="sv">Lck</th>
+            <th class="sv">Def</th>
+            <th class="sv">Res</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Stat Modifiers</th>
+            <td id="corrinHP" class="sv"></td>
+            <td id="corrinStr" class="sv"></td>
+            <td id="corrinMag" class="sv"></td>
+            <td id="corrinSkl" class="sv"></td>
+            <td id="corrinSpd" class="sv"></td>
+            <td id="corrinLck" class="sv"></td>
+            <td id="corrinDef" class="sv"></td>
+            <td id="corrinRes" class="sv"></td>
+          </tr>
+          <tr>
+            <th>Growth Rates</th>
+            <td id="corrinHPGR" class="sv"></td>
+            <td id="corrinStrGR" class="sv"></td>
+            <td id="corrinMagGR" class="sv"></td>
+            <td id="corrinSklGR" class="sv"></td>
+            <td id="corrinSpdGR" class="sv"></td>
+            <td id="corrinLckGR" class="sv"></td>
+            <td id="corrinDefGR" class="sv"></td>
+            <td id="corrinResGR" class="sv"></td>
+          </tr>
+        </tbody>
       </table>
-    </details>
+    </div>
   </section>
 
   <section>
+    <input name="show-first-gen-units" type="checkbox" role="switch" checked />
+    <label for="show-first-gen-units">
+      <h2>First Generation Units</h2> <!-- TODO: why is the label not working to toggle -->
+    </label>
+
     <details id="fg" name="fg" open>
-      <summary class="header"><h2>First Generation Units</h2></summary>
+      <summary>First Generation Unit Details</summary>
       <ul>
         <li> Royal units' names are followed by an asterisk.</li>
         <li> Corrin can use a Partner Seal to inherit a class from any unit with whom (s)he has achieved A rank.</li>
@@ -139,34 +148,35 @@
         <li> Pair up bonuses shown are for S Rank partners only.</li>
         <li> In addition to the pair up bonuses listed, Outlaws, Adventurers, Ninjas, Master Ninjas, and mounted promoted classes provide +1 movement.</li>
       </ul>
-
-      <div id="ffs">
-        <table id="firstGen">
-          <thead>
-            <tr>
-              <th>Unit</th>
-              <th>S Rank</th>
-              <th>A+ Rank</th>
-              <th>Class</th>
-              <th>Displaying</th>
-              <th class="sv">HP</th>
-              <th class="sv">Str</th>
-              <th class="sv">Mag</th>
-              <th class="sv">Skl</th>
-              <th class="sv">Spd</th>
-              <th class="sv">Lck</th>
-              <th class="sv">Def</th>
-              <th class="sv">Res</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
     </details>
+
+    <div id="ffs" class="table-wrapper">
+      <table id="firstGen">
+        <thead>
+          <tr>
+            <th>Unit</th>
+            <th>Supports</th>
+            <th>Displaying</th>
+            <th class="sv">HP</th>
+            <th class="sv">Str</th>
+            <th class="sv">Mag</th>
+            <th class="sv">Skl</th>
+            <th class="sv">Spd</th>
+            <th class="sv">Lck</th>
+            <th class="sv">Def</th>
+            <th class="sv">Res</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </section>
 
   <section>
-    <h2>Child Units</h2>
+    <input name="show-child-units" type="checkbox" role="switch" checked />
+    <label for="show-child-units">
+      <h2>Child Units</h2> <!-- TODO: why is the label not working to toggle -->
+    </label>
 
     <details name="kids" open>
       <summary>Child Unit Details</summary>
