@@ -8,12 +8,6 @@
   --pico-outline-width: 0.1rem;
 }
 
-header,
-main,
-footer {
-  max-width: calc(100% - (var(--pico-spacing) * 4)) !important;
-}
-
 /* REVELATION [default] (pico.cyan.css) */
 
 [data-theme=light],

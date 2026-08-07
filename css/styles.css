@@ -59,6 +59,18 @@ fieldset select {
   margin: calc(var(--pico-border-width * -1));
 }
 
+.table-wrapper {
+  max-height: calc(100vh - (var(--pico-spacing) * 02));
+  max-width: 100vw;
+  overflow-x: auto;
+  overflow-y: auto;
+
+  /* TODO: breakpoint'd */
+
+  margin-left: calc(var(--pico-spacing) * -1);
+  margin-right: calc(var(--pico-spacing) * -1);
+}
+
 table {
   --pico-form-element-spacing-horizontal: 0.4rem;
   --pico-form-element-spacing-vertical: 0.2rem;
