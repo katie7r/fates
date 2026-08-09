@@ -219,7 +219,7 @@ var azura = {
   baseClass: ["Songstress", "Sky Knight"],
   bff: ["Hinoka", "Sakura", "Elise"],
   sRankVanilla: ["Corrin (M)", "Jakob", "Silas", "Kaze", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Ryoma", "Takumi", "Saizo", "Kaden", "Hinata", "Azama", "Subaki", "Hayato"],
-  sRankModded: ["Anna", "Corrin (F)", "Felicia", "Flora", "Izana", "Mozu", "Shura", "Beruka", "Camilla", "Charlotte", "Nyx", "Peri", "Selena", "Hana", "Hinoka", "Kagero", "Oboro", "Orochi", "Reina", "Rinkah", "Scarlet", "Setsuna"],
+  sRankModded: ["Anna", "Corrin (F)", "Felicia", "Flora", "Izana", "Mozu", "Shura", "Beruka", "Camilla", "Charlotte", "Effie", "Nyx", "Peri", "Selena", "Hana", "Hinoka", "Kagero", "Oboro", "Orochi", "Reina", "Rinkah", "Scarlet", "Setsuna"],
   strMod: 0,
   magMod: 0,
   sklMod: 1,
